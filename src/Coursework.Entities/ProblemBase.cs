@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 
 namespace Coursework.Entities
 {
@@ -11,6 +12,8 @@ namespace Coursework.Entities
     public double Eps { get; set; }
     public int UserId { get; set; }
     public int StateId { get; set; }
+    public DateTime CreationDate { get; set; }
+    public int? TaskId { get; set; }
 
     public virtual User User { get; set; }
     public virtual State State { get; set; }
