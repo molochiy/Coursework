@@ -1,13 +1,27 @@
 ﻿using System.Web.Mvc;
+using Coursework.Entities;
+using Coursework.Repositories.Abstract;
 
 namespace Coursework.Web.Controllers
 {
-    public class HomeController : Controller
+  public class HomeController : Controller
+  {
+    private readonly IRepository _repository;
+
+    public HomeController(IRepository repository)
     {
-        // GET: Home
-        public ActionResult Index()
-        {
-            return View();
-        }
+      _repository = repository;
     }
+
+    // GET: Home
+    public ActionResult Index()
+    {
+      var states = _repository.Get<State>();
+      ViewBag.States = states;
+      var roles = _repository.Get<Role>();
+      ViewBag.Roles = roles;
+
+      return View();
+    }
+  }
 }

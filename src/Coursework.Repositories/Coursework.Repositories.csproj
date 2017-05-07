@@ -30,7 +30,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\..\lib\packages\Autofac.4.5.0\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\lib\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\lib\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -40,7 +54,49 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\RepositoryBase.cs" />
+    <Compile Include="AutofacModule.cs" />
+    <Compile Include="Concrete\CourseworkRepository.cs" />
+    <Compile Include="Concrete\DefaultDataContextSettings.cs" />
+    <Compile Include="Abstract\IRepository.cs" />
+    <Compile Include="Concrete\CourseworkDataContext.cs" />
+    <Compile Include="Abstract\IDataContext.cs" />
+    <Compile Include="Abstract\IDataContextFactory.cs" />
+    <Compile Include="Abstract\IDataContextSettings.cs" />
+    <Compile Include="Concrete\CourseworkDataContextFactory.cs" />
+    <Compile Include="Concrete\Disposable.cs" />
+    <Compile Include="Configuration\CourseworkContext.cs" />
+    <Compile Include="Configuration\EntityBaseConfiguration.cs" />
+    <Compile Include="Configuration\AntennasSynthesisProblemConfiguration.cs" />
+    <Compile Include="Configuration\BranchingLinesProblemConfiguration.cs" />
+    <Compile Include="Configuration\ProblemResultConfiguration.cs" />
+    <Compile Include="Configuration\RoleConfiguration.cs" />
+    <Compile Include="Configuration\StateConfiguration.cs" />
+    <Compile Include="Configuration\UserConfiguration.cs" />
+    <Compile Include="Extentions\PropertyPathVisitor.cs" />
+    <Compile Include="Extentions\QueriableExtentions.cs" />
+    <Compile Include="Migrations\201705072156387_Initial Migration.cs" />
+    <Compile Include="Migrations\201705072156387_Initial Migration.Designer.cs">
+      <DependentUpon>201705072156387_Initial Migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <Content Include="connections.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Coursework.Entities\Coursework.Entities.csproj">
+      <Project>{D29CCFDF-11C9-47E0-896A-FB00728683B2}</Project>
+      <Name>Coursework.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201705072156387_Initial Migration.resx">
+      <DependentUpon>201705072156387_Initial Migration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

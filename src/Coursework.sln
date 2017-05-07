@@ -5,8 +5,6 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coursework.Web", "Coursework.Web\Coursework.Web.csproj", "{66B2ABB1-82AC-485E-AB5C-061B2DB982C6}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Coursework.Database", "Coursework.Database\Coursework.Database.sqlproj", "{673FD20C-4753-4F65-A440-E21F52299E39}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coursework.Entities", "Coursework.Entities\Coursework.Entities.csproj", "{D29CCFDF-11C9-47E0-896A-FB00728683B2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coursework.Repositories", "Coursework.Repositories\Coursework.Repositories.csproj", "{FA44D595-A47E-443C-9ACB-F1050EE51CDF}"
@@ -23,12 +21,6 @@ Global
 		{66B2ABB1-82AC-485E-AB5C-061B2DB982C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66B2ABB1-82AC-485E-AB5C-061B2DB982C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66B2ABB1-82AC-485E-AB5C-061B2DB982C6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{673FD20C-4753-4F65-A440-E21F52299E39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{673FD20C-4753-4F65-A440-E21F52299E39}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{673FD20C-4753-4F65-A440-E21F52299E39}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{673FD20C-4753-4F65-A440-E21F52299E39}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{673FD20C-4753-4F65-A440-E21F52299E39}.Release|Any CPU.Build.0 = Release|Any CPU
-		{673FD20C-4753-4F65-A440-E21F52299E39}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{D29CCFDF-11C9-47E0-896A-FB00728683B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D29CCFDF-11C9-47E0-896A-FB00728683B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D29CCFDF-11C9-47E0-896A-FB00728683B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
