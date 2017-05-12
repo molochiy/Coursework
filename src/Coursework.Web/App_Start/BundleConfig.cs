@@ -6,7 +6,11 @@ namespace Coursework.Web
   {
     public static void RegisterBundles(BundleCollection bundles)
     {
-      bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/css/custom/common.css"));
+      bundles.Add(new ScriptBundle("~/bundles/angular").Include("~/Scripts/libs/angularjs/angular.js"));
+
+      bundles.Add(new ScriptBundle("~/bundles/problems").Include("~/Scripts/app/pages/problems/problems.module.js", "~/Scripts/app/pages/problems/problems.controller.js"));
+
+      bundles.Add(new StyleBundle("~/bundles/css").Include("~/Content/css/custom/common.css", "~/Content/css/custom/user.css", "~/Content/css/custom/menu.css"));
 
       BundleTable.EnableOptimizations = false;
     }

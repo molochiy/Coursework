@@ -1,100 +1,53 @@
-﻿﻿@{
-    ViewBag.Title = "Coursework";
+﻿@using System.Web.Optimization
+@{
+  ViewBag.Title = "Coursework";
 }
 
-<div ng-app="HomeApp" class="page-content">
-    <div class="left-side">
-        <div class="user-info">
-            <ul>
-                @foreach (var state in ViewBag.States)
-                {
-                    <li>@state.Name</li>
-                }
-            </ul>
+@Scripts.Render("~/bundles/problems")
+
+<div ng-app="problemsModule" class="page-content">
+  <div class="left-side">
+    <div class="user-info" ng-controller="ProblemsController as pc">
+      <div class="user-photo">
+        <img src="~/Content/images/abstract-user-photo.png" />
+      </div>
+      <div class="user-login">
+        {{pc.user.userLogin}}
+      </div>
+    </div>
+
+    <div id="problems" class="input-menu">
+      <div id="problem1" class="menu-item">
+        <div class="menu-item-header">
+          <a ng-click="isFirstProblemExpanded = !isFirstProblemExpanded">
+            <span>Problem 1</span>
+            <img ng-show="!isFirstProblemExpanded" src="~/Content/svg/expand-arrow-up.svg"/>
+            <img ng-show="isFirstProblemExpanded" src="~/Content/svg/expand-arrow-down.svg"/>
+          </a>
         </div>
-
-
-
-
-
-        <div class="input-menu container-fluid" ng-controller="personCtrl">
-
-            <div id="tasks" class="span12">
-                <div class="row-fluid">
-                    <button ng-click="hideFirst()">Чисельні алгоритми розв’язування задачі синтезу випромінюючої системи (антенної решітки) за енергетичною діаграмою направленості</button>
-                </div>
-
-                <div class="flexslider" ng-hide="hideFirstVar">
-                    <ul class="slides">
-                        <li>
-                            <div style="text-align: center">
-                                Чисельні алгоритми розв’язування задачі синтезу випромінюючої системи (антенної решітки) за енергетичною діаграмою направленості
-                            </div>
-                        </li>
-                        <li>
-                            <div style="text-align: center">
-                                Знаходжння ліній галуження розв'язків нелінійного інтегрального оператора
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="row-fluid">
-                    <button ng-click="hideSecond()">Знаходжння ліній галуження розв'язків нелінійного інтегрального оператора</button>
-                </div>
-
-                <div class="flexslider" ng-hide="hideSecondVar">
-                    <ul class="slides">
-                        <li>
-                            <div>
-                                Чисельні алгоритми розв’язування задачі синтезу випромінюючої системи (антенної решітки) за енергетичною діаграмою направленості
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                Знаходжння ліній галуження розв'язків нелінійного інтегрального оператора
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
+        <div class="menu-item-content" ng-show="!isFirstProblemExpanded">
+          <p>Problem 1</p>
         </div>
-
-
-
-
-
-
+      </div>
+      <div id="problem2" class="menu-item">
+        <div class="menu-item-header">
+          <a ng-click="isFirstProblemExpanded = !isFirstProblemExpanded">
+            <span>Problem 2</span>
+            <img ng-show="isFirstProblemExpanded" src="~/Content/svg/expand-arrow-up.svg" />
+            <img ng-show="!isFirstProblemExpanded" src="~/Content/svg/expand-arrow-down.svg" />
+          </a>
+        </div>
+        <div class="menu-item-content" ng-show="isFirstProblemExpanded">
+          <p>Problem 2</p>
+        </div>
+      </div>
     </div>
-    <div class="center-side">
-        <div class="plot"></div>
-        <div class="plot"></div>
-    </div>
 
-    <div class="right-side">
-        -
-    </div>
-
+  </div>
+  <div class="middle-side">
+    <div class="plot"></div>
+    <div class="plot"></div>
+  </div>
+  <div class="right-side">
+  </div>
 </div>
-
-<script src="~/Scripts/angular.js"></script>
-<script src="~/Scripts/jquery-1.9.1.min.js"></script>
-<script src="~/Scripts/jquery.flexslider-min.js"></script>
-<script>
-    var HomeApp = angular.module("HomeApp", []);
-    HomeApp.controller('personCtrl', function ($scope) {
-        $scope.hideFirstVar = true;
-        $scope.hideSecondVar = true;
-        $scope.hideFirst = function () {
-            $scope.hideFirstVar = !$scope.hideFirstVar;
-        };
-        $scope.hideSecond = function () {
-            $scope.hideSecondVar = !$scope.hideSecondVar;
-        };
-    });
-
-    $(window).load(function () {
-        $('.flexslider').flexslider();
-    });
-</script>

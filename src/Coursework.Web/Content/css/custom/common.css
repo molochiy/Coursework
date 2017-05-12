@@ -27,20 +27,6 @@ body,
     align-content: center;
 }
 
-.user-info {
-    display: flex;
-    width: 90%;
-    height: 20%;
-    background: lightcoral;
-}
-
-.input-menu {
-    display: flex;
-    width: 90%;
-    height: 60%;
-    background: lightpink;
-}
-
 .right-side {
     display: flex;
     width: 19%;
@@ -52,7 +38,7 @@ body,
     align-content: center;
 }
 
-.center-side {
+.middle-side {
     display: flex;
     width: 60%;
     height: 100%;

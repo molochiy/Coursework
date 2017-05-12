@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title</title>
-    <link rel="stylesheet" href="~/Content/css/custom/flexslider.css" type="text/css" media="screen" />
-    @Styles.Render("~/Content/css")
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>@ViewBag.Title</title>
+  @Styles.Render("~/bundles/css")
+  @Scripts.Render("~/bundles/angular")
 </head>
 <body>
-    @RenderBody()
+  @RenderBody()
 </body>
 </html>
