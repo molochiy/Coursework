@@ -176,9 +176,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\css\custom\common.css" />
+    <Content Include="Content\css\custom\flexslider.css" />
     <Content Include="Content\css\custom\menu.css" />
     <Content Include="Content\css\custom\user.css" />
     <Content Include="Content\images\abstract-user-photo.png" />
+    <Content Include="Content\images\bg_control_nav.png" />
+    <Content Include="Content\images\bg_direction_nav.png" />
     <Content Include="Content\svg\expand-arrow-up.svg" />
     <Content Include="Content\svg\expand-arrow-down.svg" />
     <Content Include="Global.asax" />
@@ -186,6 +189,8 @@
     <Content Include="Scripts\app\pages\problems\problems.module.js" />
     <Content Include="Scripts\libs\angularjs\angular.js" />
     <Content Include="Scripts\libs\angularjs\angular.min.js" />
+    <Content Include="Scripts\libs\flexslider\jquery.flexslider-min.js" />
+    <Content Include="Scripts\libs\flexslider\jquery.flexslider.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
