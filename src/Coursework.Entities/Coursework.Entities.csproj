@@ -30,7 +30,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\..\lib\packages\Autofac.4.6.0\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\lib\packages\AutoMapper.6.0.2\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentValidation, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\packages\FluentValidation.7.0.0\lib\net45\FluentValidation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -40,17 +54,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EntityBase.cs" />
-    <Compile Include="AntennasSynthesisProblem.cs" />
-    <Compile Include="ProblemBase.cs" />
-    <Compile Include="ProblemResult.cs" />
-    <Compile Include="BranchingLinesProblem.cs" />
+    <Compile Include="AutofacModule.cs" />
+    <Compile Include="DatabaseEntities\EntityBase.cs" />
+    <Compile Include="DatabaseEntities\AntennasSynthesisProblem.cs" />
+    <Compile Include="DatabaseEntities\ProblemBase.cs" />
+    <Compile Include="DatabaseEntities\ProblemResult.cs" />
+    <Compile Include="DatabaseEntities\BranchingLinesProblem.cs" />
+    <Compile Include="ServicesEntities\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Role.cs" />
-    <Compile Include="State.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="DatabaseEntities\Role.cs" />
+    <Compile Include="DatabaseEntities\State.cs" />
+    <Compile Include="DatabaseEntities\User.cs" />
+    <Compile Include="ServicesEntities\MembershipContext.cs" />
+    <Compile Include="TypeMapping\Concrete\AutoMapperAdapter.cs" />
+    <Compile Include="TypeMapping\AutoMapperConfiguration.cs" />
+    <Compile Include="TypeMapping\Abstract\IAutoMapper.cs" />
+    <Compile Include="TypeMapping\MappingProfiles\DatabaseEntitiesServiceEntitiesMappingProfile.cs" />
+    <Compile Include="TypeMapping\MappingProfiles\ViewModelsServiceEntitiesMappingProfile.cs" />
+    <Compile Include="Validators\AccountViewModelValidators\LoginViewModelValidator.cs" />
+    <Compile Include="Validators\AccountViewModelValidators\RegistrationViewModelValidator.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\RegistrationViewModel.cs" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -30,8 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autofac">
-      <HintPath>..\..\lib\packages\Autofac.4.5.0\lib\net45\Autofac.dll</HintPath>
+    <Reference Include="Autofac, Version=4.6.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\packages\Autofac.4.6.0\lib\net45\Autofac.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -44,7 +45,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IEncryptionService.cs" />
+    <Compile Include="Abstract\IMembershipService.cs" />
+    <Compile Include="Abstract\ServiceBase.cs" />
+    <Compile Include="AutofacModule.cs" />
+    <Compile Include="Concrete\EncryptionService.cs" />
+    <Compile Include="Concrete\MembershipService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Coursework.Entities\Coursework.Entities.csproj">
+      <Project>{d29ccfdf-11c9-47e0-896a-fb00728683b2}</Project>
+      <Name>Coursework.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Coursework.Repositories\Coursework.Repositories.csproj">
+      <Project>{fa44d595-a47e-443c-9acb-f1050ee51cdf}</Project>
+      <Name>Coursework.Repositories</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

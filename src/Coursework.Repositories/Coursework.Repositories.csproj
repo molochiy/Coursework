@@ -30,8 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autofac">
-      <HintPath>..\..\lib\packages\Autofac.4.5.0\lib\net45\Autofac.dll</HintPath>
+    <Reference Include="Autofac, Version=4.6.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\packages\Autofac.4.6.0\lib\net45\Autofac.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework">
@@ -79,6 +80,10 @@
     <Compile Include="Migrations\201705072156387_Initial Migration.Designer.cs">
       <DependentUpon>201705072156387_Initial Migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705201321172_added username field to user.cs" />
+    <Compile Include="Migrations\201705201321172_added username field to user.Designer.cs">
+      <DependentUpon>201705201321172_added username field to user.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -96,6 +101,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201705072156387_Initial Migration.resx">
       <DependentUpon>201705072156387_Initial Migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705201321172_added username field to user.resx">
+      <DependentUpon>201705201321172_added username field to user.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

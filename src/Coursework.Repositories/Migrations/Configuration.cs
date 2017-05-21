@@ -1,5 +1,5 @@
-using Coursework.Entities;
 using System.Data.Entity.Migrations;
+using Coursework.Entities.DatabaseEntities;
 
 namespace Coursework.Repositories.Migrations
 {

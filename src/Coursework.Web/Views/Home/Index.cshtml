@@ -3,6 +3,8 @@
   ViewBag.Title = "Coursework";
 }
 
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/plotly")
 @Scripts.Render("~/bundles/problems")
 
 <div ng-app="problemsModule" class="page-content">
@@ -21,28 +23,28 @@
         <div class="menu-item-header">
           <a ng-click="isFirstProblemExpanded = !isFirstProblemExpanded">
             <span>Problem 1</span>
-            <img ng-show="!isFirstProblemExpanded" src="~/Content/svg/expand-arrow-up.svg"/>
-            <img ng-show="isFirstProblemExpanded" src="~/Content/svg/expand-arrow-down.svg"/>
+            <img ng-show="!isFirstProblemExpanded" src="~/Content/svg/expand-arrow-up.svg" />
+            <img ng-show="isFirstProblemExpanded" src="~/Content/svg/expand-arrow-down.svg" />
           </a>
         </div>
 
         <div class="flexslider menu-item-content" ng-show="!isFirstProblemExpanded">
-            <ul class="slides">
-                <li>
-                    <div style="text-align: center; padding-left:20%; padding-right:20%;">
-                        Problem 1 Case 1 Kopylets
-                        Problem 1 Case 1 Kopylets
-                        Problem 1 Case 1 Kopylets
-                    </div>
-                </li>
-                <li>
-                    <div style="text-align: center; padding-left:20%; padding-right:20%;">
-                        Problem 1 Case 2 Kopylets
-                        Problem 1 Case 2 Kopylets
-                        Problem 1 Case 2 Kopylets
-                    </div>
-                </li>
-            </ul>
+          <ul class="slides">
+            <li>
+              <div style="text-align: center; padding-left:20%; padding-right:20%;">
+                Problem 1 Case 1 Kopylets
+                Problem 1 Case 1 Kopylets
+                Problem 1 Case 1 Kopylets
+              </div>
+            </li>
+            <li>
+              <div style="text-align: center; padding-left:20%; padding-right:20%;">
+                Problem 1 Case 2 Kopylets
+                Problem 1 Case 2 Kopylets
+                Problem 1 Case 2 Kopylets
+              </div>
+            </li>
+          </ul>
         </div>
 
       </div>
@@ -56,22 +58,22 @@
         </div>
 
         <div class="flexslider menu-item-content" ng-show="isFirstProblemExpanded">
-            <ul class="slides">
-                <li>
-                    <div style="text-align: center; padding-left:20%; padding-right:20%;">
-                        Problem 2 Case 1 Molochyi
-                        Problem 2 Case 1 Molochyi
-                        Problem 2 Case 1 Molochyi
-                    </div>
-                </li>
-                <li>
-                    <div style="text-align: center; padding-left:20%; padding-right:20%;">
-                        Problem 2 Case 2 Molochyi
-                        Problem 2 Case 2 Molochyi
-                        Problem 2 Case 2 Molochyi
-                    </div>
-                </li>
-            </ul>
+          <ul class="slides">
+            <li>
+              <div style="text-align: center; padding-left:20%; padding-right:20%;">
+                Problem 2 Case 1 Molochyi
+                Problem 2 Case 1 Molochyi
+                Problem 2 Case 1 Molochyi
+              </div>
+            </li>
+            <li>
+              <div style="text-align: center; padding-left:20%; padding-right:20%;">
+                Problem 2 Case 2 Molochyi
+                Problem 2 Case 2 Molochyi
+                Problem 2 Case 2 Molochyi
+              </div>
+            </li>
+          </ul>
         </div>
 
       </div>
@@ -79,17 +81,39 @@
 
   </div>
   <div class="middle-side">
-    <div class="plot"></div>
-    <div class="plot"></div>
+    <div id="plot1" class="plot"></div>
+    <div id="plot2" class="plot"></div>
   </div>
   <div class="right-side">
   </div>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script src="~/Scripts/libs/flexslider/jquery.flexslider-min.js"></script>
 <script type="text/javascript">
-    $(window).load(function () {
-        $('.flexslider').flexslider();
-    });
+  $(window).on('load', () => {
+    $('.flexslider').flexslider();
+
+    z1 = [
+    [8.83, 8.89, 8.81, 8.87, 8.9, 8.87],
+    [8.89, 8.94, 8.85, 8.94, 8.96, 8.92],
+    [8.84, 8.9, 8.82, 8.92, 8.93, 8.91],
+    [8.79, 8.85, 8.79, 8.9, 8.94, 8.92],
+    [8.79, 8.88, 8.81, 8.9, 8.95, 8.92],
+    [8.8, 8.82, 8.78, 8.91, 8.94, 8.92],
+    [8.75, 8.78, 8.77, 8.91, 8.95, 8.92],
+    [8.8, 8.8, 8.77, 8.91, 8.95, 8.94],
+    [8.74, 8.81, 8.76, 8.93, 8.98, 8.99],
+    [8.89, 8.99, 8.92, 9.1, 9.13, 9.11],
+    [8.97, 8.97, 8.91, 9.09, 9.11, 9.11],
+    [9.04, 9.08, 9.05, 9.25, 9.28, 9.27],
+    [9, 9.01, 9, 9.2, 9.23, 9.2],
+    [8.99, 8.99, 8.98, 9.18, 9.2, 9.19],
+    [8.93, 8.97, 8.97, 9.18, 9.2, 9.18]
+    ];
+
+    // creating data objects..
+    var data_z1 = { z: z1, type: 'surface' };
+
+    // Plotting the surfaces..
+    Plotly.newPlot('plot1', [data_z1]);
+  });
 </script>

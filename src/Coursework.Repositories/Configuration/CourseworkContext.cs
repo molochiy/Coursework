@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using Coursework.Entities;
+using Coursework.Entities.DatabaseEntities;
 
 namespace Coursework.Repositories.Configuration
 {

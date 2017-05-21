@@ -13,7 +13,8 @@ namespace Coursework.Web
       var builder = new ContainerBuilder();
 
       builder.RegisterModule<AutofacModule>();
-      builder.RegisterModule<Repositories.AutofacModule>();
+      builder.RegisterModule<Entities.AutofacModule>();
+      builder.RegisterModule<Services.AutofacModule>();
 
       var container = builder.Build();
 

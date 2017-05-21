@@ -48,8 +48,9 @@
       <HintPath>..\..\lib\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Autofac">
-      <HintPath>..\..\lib\packages\Autofac.4.5.0\lib\net45\Autofac.dll</HintPath>
+    <Reference Include="Autofac, Version=4.6.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\packages\Autofac.4.6.0\lib\net45\Autofac.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Autofac.Integration.Mvc">
@@ -191,21 +192,28 @@
     <Content Include="Scripts\libs\angularjs\angular.min.js" />
     <Content Include="Scripts\libs\flexslider\jquery.flexslider-min.js" />
     <Content Include="Scripts\libs\flexslider\jquery.flexslider.js" />
+    <Content Include="Scripts\libs\jquery\jquery-3.2.1.js" />
+    <Content Include="Scripts\libs\jquery\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\libs\plotly\plotly-latest.min.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiControllers\AccountController.cs" />
+    <Compile Include="ApiControllers\ApiControllerBase.cs" />
+    <Compile Include="ApiControllers\ResultController.cs" />
     <Compile Include="App_Start\AutofacConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="AutofacModule.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\AuthenticationHandler.cs" />
+    <Compile Include="Infrastructure\Extensions\RequestMessageExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -231,16 +239,15 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\css\lib\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Coursework.Entities\Coursework.Entities.csproj">
       <Project>{D29CCFDF-11C9-47E0-896A-FB00728683B2}</Project>
       <Name>Coursework.Entities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Coursework.Repositories\Coursework.Repositories.csproj">
-      <Project>{fa44d595-a47e-443c-9acb-f1050ee51cdf}</Project>
-      <Name>Coursework.Repositories</Name>
+    <ProjectReference Include="..\Coursework.Services\Coursework.Services.csproj">
+      <Project>{feab0a4c-2616-476f-b62f-008a012f47db}</Project>
+      <Name>Coursework.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -1,4 +1,4 @@
-﻿using Coursework.Entities;
+﻿using Coursework.Entities.DatabaseEntities;
 
 namespace Coursework.Repositories.Configuration
 {

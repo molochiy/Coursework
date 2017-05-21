@@ -1,4 +1,5 @@
 ﻿using System.Web.Http;
+using Coursework.Web.Infrastructure;
 
 namespace Coursework.Web
 {
@@ -7,6 +8,7 @@ namespace Coursework.Web
     public static void Register(HttpConfiguration config)
     {
       // Web API configuration and services
+      config.MessageHandlers.Add(new AuthenticationHandler());
 
       // Web API routes
       config.MapHttpAttributeRoutes();

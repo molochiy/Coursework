@@ -1,4 +1,4 @@
-﻿using Coursework.Entities;
+﻿using Coursework.Entities.DatabaseEntities;
 
 namespace Coursework.Repositories.Configuration
 {
@@ -14,9 +14,6 @@ namespace Coursework.Repositories.Configuration
         ur.MapRightKey("RoleId");
         ur.ToTable("UserRoles");
       });
-
-      //HasMany(u => u.AntennasSynthesisProblems).WithRequired(asp => asp.User).HasForeignKey(asp => asp.UserId);
-      //HasMany(u => u.BranchingLinesProblems).WithRequired(blp => blp.User).HasForeignKey(blp => blp.UserId);
     }
   }
 }

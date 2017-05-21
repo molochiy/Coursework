@@ -1,5 +1,5 @@
 ﻿using System.Data.Entity.ModelConfiguration;
-using Coursework.Entities;
+using Coursework.Entities.DatabaseEntities;
 
 namespace Coursework.Repositories.Configuration
 {
