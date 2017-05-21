@@ -1,0 +1,83 @@
+﻿.accounts {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+
+  .accounts .sign-in,
+  .accounts .sign-up {
+    margin: 0 50px;
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    width: 320px;
+    align-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: #f2efe8;
+    justify-content: space-around;
+  }
+
+  .accounts-header {
+    display: flex;
+    width: 100%;
+    height: 15%;
+    background: #b08a92;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .accounts-fields {
+    display: flex;
+    flex-direction: column;
+    height: 65%;
+    width: 100%;
+    align-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: #f2efe8;
+    justify-content: start;
+  }
+
+  .accounts-button {
+    display: flex;
+    height: 20%;
+    align-content: center;
+    align-items: center;
+  }
+
+  .accounts .problem-button {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+    background: #dbe9d8;
+    color: #b08a92;
+    border-radius: 5px;
+    padding: 0 10px;
+  }
+
+  .accounts .form-pair {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: left;
+    padding-top: 10px;
+    width: 90%;
+  }
+
+  .accounts span {
+    font-size: 20px;
+    color: #b08a92;
+  }
+
+  .accounts input[type="text"],
+  .accounts input[type="password"],
+  .accounts input[type="email"] {
+    width: 100%;
+    height: 30px;
+  }

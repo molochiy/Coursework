@@ -178,16 +178,36 @@
   <ItemGroup>
     <Content Include="Content\css\custom\common.css" />
     <Content Include="Content\css\custom\flexslider.css" />
+    <Content Include="Content\css\custom\account.css" />
     <Content Include="Content\css\custom\menu.css" />
+    <Content Include="Content\css\custom\problem.css" />
+    <Content Include="Content\css\custom\top-bar.css" />
     <Content Include="Content\css\custom\user.css" />
+    <Content Include="Content\css\lib\bootstrap.min.css" />
+    <Content Include="Content\css\lib\toastr.css" />
     <Content Include="Content\images\abstract-user-photo.png" />
     <Content Include="Content\images\bg_control_nav.png" />
     <Content Include="Content\images\bg_direction_nav.png" />
     <Content Include="Content\svg\expand-arrow-up.svg" />
     <Content Include="Content\svg\expand-arrow-down.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\app\pages\problems\problems.controller.js" />
-    <Content Include="Scripts\app\pages\problems\problems.module.js" />
+    <Content Include="Scripts\app\account\account.controller.js" />
+    <Content Include="Scripts\app\account\account.service.js" />
+    <Content Include="Scripts\app\account\pages\account.html" />
+    <Content Include="Scripts\app\problem1\pages\problem1.html" />
+    <Content Include="Scripts\app\problem1\problem1.controller.js" />
+    <Content Include="Scripts\app\problem2\pages\problem2.html" />
+    <Content Include="Scripts\app\shared\api.service.js" />
+    <Content Include="Scripts\app\shared\notification.service.js" />
+    <Content Include="Scripts\app\shared\root.controller.js" />
+    <Content Include="Scripts\app\problem2\problem2.controller.js" />
+    <Content Include="Scripts\app\shared\app.module.js" />
+    <Content Include="Scripts\app\shared\pages\topBar.html" />
+    <Content Include="Scripts\app\shared\top-bar.directive.js" />
+    <Content Include="Scripts\libs\angularjs\angular-base64.js" />
+    <Content Include="Scripts\libs\angularjs\angular-cookies.js" />
+    <Content Include="Scripts\libs\angularjs\angular-route.js" />
+    <Content Include="Scripts\libs\angularjs\angular-validator.js" />
     <Content Include="Scripts\libs\angularjs\angular.js" />
     <Content Include="Scripts\libs\angularjs\angular.min.js" />
     <Content Include="Scripts\libs\flexslider\jquery.flexslider-min.js" />
@@ -195,6 +215,7 @@
     <Content Include="Scripts\libs\jquery\jquery-3.2.1.js" />
     <Content Include="Scripts\libs\jquery\jquery-3.2.1.min.js" />
     <Content Include="Scripts\libs\plotly\plotly-latest.min.js" />
+    <Content Include="Scripts\libs\toastr\toastr.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -238,7 +259,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\css\lib\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Coursework.Entities\Coursework.Entities.csproj">

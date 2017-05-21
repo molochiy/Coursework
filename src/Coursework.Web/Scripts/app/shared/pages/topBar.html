@@ -1,0 +1,20 @@
+﻿<div class="top-bar">
+  <div class="top-bar-left">
+    <div ng-if="rootCtrl.userData.isUserLoggedIn" class="top-bar-left">
+      <div class="user-info">
+        <span class="user-greeting">Hello, <span class="user-login">{{rootCtrl.username}}</span></span>
+      </div>
+      <div ng-if="!rootCtrl.isFirstProblemSelected" class="problem-button">
+        <a ng-click="rootCtrl.selectFirstProblem()">First problem</a>
+      </div>
+      <div ng-if="rootCtrl.isFirstProblemSelected" class="problem-button">
+        <a ng-click="rootCtrl.selectSecondProblem()">Second problem</a>
+      </div>
+    </div>
+  </div>
+  <div class="top-bar-right">
+    <div ng-if="rootCtrl.userData.isUserLoggedIn" class="problem-button">
+      <a ng-click="rootCtrl.logout()">Logout</a>
+    </div>
+  </div>
+</div>
