@@ -1,11 +1,14 @@
 ﻿using Coursework.Entities.ServicesEntities;
+using System.Collections.Generic;
 
 namespace Coursework.Services.Abstract
 {
   public interface IHistoryService
   {
-    AntennasSynthesisProblem GetAntennasSynthesisProblemById(int Id);
+    List<AntennasSynthesisProblem> GetAntennasSynthesisProblemByUserId(int userId);
 
-    BranchingLinesProblem GetBranchingLinesProblemById(int Id);
+    List<BranchingLinesProblem> GetBranchingLinesProblemByUserId(int userId);
+
+    ProblemResult GetProblemResultById(int resultId);
   }
 }

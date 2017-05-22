@@ -10,6 +10,7 @@ namespace Coursework.Entities.TypeMapping.MappingProfiles
       CreateMap<DatabaseEntities.User, User>();
       CreateMap<DatabaseEntities.AntennasSynthesisProblem, AntennasSynthesisProblem>();
       CreateMap<DatabaseEntities.BranchingLinesProblem, BranchingLinesProblem>();
+      CreateMap<DatabaseEntities.ProblemResult, ProblemResult>();
     }
   }
 }

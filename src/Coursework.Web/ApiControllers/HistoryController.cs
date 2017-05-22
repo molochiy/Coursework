@@ -13,27 +13,38 @@ namespace Coursework.Web.ApiControllers
   [RoutePrefix("api/history")]
   public class HistoryController : ApiControllerBase
   {
+    private readonly IMembershipService _membershipService;
     private readonly IHistoryService _historyService;
     private readonly IAutoMapper _mapper;
 
-    public HistoryController(IHistoryService historyService, IAutoMapper mapper)
+    public HistoryController(IMembershipService membershipService, IHistoryService historyService, IAutoMapper mapper)
     {
+      _membershipService = membershipService;
       _historyService = historyService;
       _mapper = mapper;
     }
 
-    [Route("get/problem1")]
+    [Route("problem1")]
     [HttpGet]
-    public HttpResponseMessage GetAntennasSynthesisProblem(HttpRequestMessage request, int id)
+    public HttpResponseMessage GetAntennasSynthesisProblem(HttpRequestMessage request)
     {
-      return CreateHttpResponse(request, () => request.CreateResponse(HttpStatusCode.OK, new { results = _historyService.GetAntennasSynthesisProblemById(id) }));
+      var userID = _membershipService.GetUserIdByLogin(HttpContext.Current.User.Identity.Name);
+      return CreateHttpResponse(request, () => request.CreateResponse(HttpStatusCode.OK, new { results = _historyService.GetAntennasSynthesisProblemByUserId(userID) }));
     }
 
-    [Route("get/problem2")]
+    [Route("problem2")]
     [HttpGet]
-    public HttpResponseMessage GetBranchingLinesProblem(HttpRequestMessage request, int id)
+    public HttpResponseMessage GetBranchingLinesProblem(HttpRequestMessage request)
     {
-      return CreateHttpResponse(request, () => request.CreateResponse(HttpStatusCode.OK, new { results = _historyService.GetBranchingLinesProblemById(id) }));
+      var userID = _membershipService.GetUserIdByLogin(HttpContext.Current.User.Identity.Name);
+      return CreateHttpResponse(request, () => request.CreateResponse(HttpStatusCode.OK, new { results = _historyService.GetBranchingLinesProblemByUserId(userID) }));
+    }
+
+    [Route("result")]
+    [HttpGet]
+    public HttpResponseMessage GetResult(HttpRequestMessage request, int resultId)
+    {
+      return CreateHttpResponse(request, () => request.CreateResponse(HttpStatusCode.OK, new { results = _historyService.GetProblemResultById(resultId) }));
     }
   }
 }
