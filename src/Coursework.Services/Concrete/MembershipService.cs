@@ -67,6 +67,12 @@ namespace Coursework.Services.Concrete
       return createdUser;
     }
 
+    public int GetUserIdByLogin(string login)
+    {
+      var User = _repository.GetSingle<Entities.DatabaseEntities.User>(u => u.Username == login);
+      return User.Id;
+    }
+
     #region Helpers
 
     private void AddUserToRole(Entities.DatabaseEntities.User user, int roleId)

@@ -12,6 +12,8 @@ namespace Coursework.Services
       builder.RegisterModule<Repositories.AutofacModule>();
       builder.RegisterType<EncryptionService>().As<IEncryptionService>();
       builder.RegisterType<MembershipService>().As<IMembershipService>();
+      builder.RegisterType<ProblemService>().As<IProblemService>();
+      builder.RegisterType<HistoryService>().As<IHistoryService>();
     }
   }
 }

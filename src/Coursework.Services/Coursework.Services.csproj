@@ -46,11 +46,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IEncryptionService.cs" />
+    <Compile Include="Abstract\IHistoryService.cs" />
     <Compile Include="Abstract\IMembershipService.cs" />
+    <Compile Include="Abstract\IProblemService.cs" />
     <Compile Include="Abstract\ServiceBase.cs" />
     <Compile Include="AutofacModule.cs" />
     <Compile Include="Concrete\EncryptionService.cs" />
+    <Compile Include="Concrete\HistoryService.cs" />
     <Compile Include="Concrete\MembershipService.cs" />
+    <Compile Include="Concrete\ProblemService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -7,5 +7,6 @@ namespace Coursework.Services.Abstract
     MembershipContext ValidateUser(string username, string password);
 
     Entities.DatabaseEntities.User CreateUser(User user, int[] roles);
+    int GetUserIdByLogin(string login);
   }
 }
