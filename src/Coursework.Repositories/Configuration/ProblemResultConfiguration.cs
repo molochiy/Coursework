@@ -6,7 +6,7 @@ namespace Coursework.Repositories.Configuration
   {
     public ProblemResultConfiguration()
     {
-      Property(pr => pr.Result).IsRequired();
+      Property(pr => pr.Result).HasColumnType("xml").IsRequired();
     }
   }
 }

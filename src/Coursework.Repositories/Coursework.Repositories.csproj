@@ -84,6 +84,10 @@
     <Compile Include="Migrations\201705201321172_added username field to user.Designer.cs">
       <DependentUpon>201705201321172_added username field to user.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705222111224_changed ProblemResult column type.cs" />
+    <Compile Include="Migrations\201705222111224_changed ProblemResult column type.Designer.cs">
+      <DependentUpon>201705222111224_changed ProblemResult column type.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -104,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705201321172_added username field to user.resx">
       <DependentUpon>201705201321172_added username field to user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705222111224_changed ProblemResult column type.resx">
+      <DependentUpon>201705222111224_changed ProblemResult column type.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
