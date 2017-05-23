@@ -1,6 +1,15 @@
 ﻿<div class="problem-page-content">
   <div class="left-side">
     <div id="problems" class="input-menu">
+      <div class="problem-header"></div>
+      <div class="problem-description"></div>
+      <div class="problem-fields">
+      </div>
+      <div class="problem-footer">
+        <div class="problem-button">
+          <a ng-click="problem2Ctrl.solve()">Solve</a>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -9,5 +18,14 @@
   </div>
 
   <div class="right-side">
+    <div id="history" class="input-menu">
+      <div class="history-header"></div>
+      <div class="history-content"></div>
+      <div class="history-footer">
+        <div class="problem-button">
+          <a ng-click="problem2Ctrl.show()">Show</a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

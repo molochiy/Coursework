@@ -46,5 +46,14 @@
         notificationService.displayError('Registration failed. Try again.');
       }
     }
+
+    function init() {
+      if ($scope.$parent.rootCtrl.userData.isUserLoggedIn) {
+        vm.username = $rootScope.repository.loggedUser.username;
+        $scope.$parent.rootCtrl.selectFirstProblem();
+      }
+    }
+
+    init();
   }
 })(angular);

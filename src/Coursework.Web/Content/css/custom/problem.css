@@ -19,6 +19,76 @@
   align-content: center;
 }
 
+.input-menu {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  width: 90%;
+  align-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #f2efe8;
+  justify-content: space-around;
+}
+
+.problem-header,
+.history-header {
+  display: flex;
+  width: 100%;
+  height: 10%;
+  background: #b08a92;
+  border-radius: 5px 5px 0 0;
+}
+
+.problem-description {
+  display: flex;
+  flex-direction: column;
+  height: 25%;
+  width: 100%;
+  align-content: center;
+  align-items: center;
+  background: #f2efe8;
+  justify-content: start;
+  border-bottom: 1px solid #b08a92;
+}
+
+.problem-fields {
+  display: flex;
+  flex-direction: column;
+  height: 55%;
+  width: 100%;
+  align-content: center;
+  align-items: center;
+  background: #f2efe8;
+  justify-content: start;
+  border-bottom: 1px solid #b08a92;
+}
+
+.problem-footer,
+.history-footer {
+  display: flex;
+  flex-direction: column;
+  height: 10%;
+  width: 100%;
+  align-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #f2efe8;
+  justify-content: center;
+}
+
+.problem-button {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  width: 120px;
+  height: 40px;
+  background: #dbe9d8;
+  color: #b08a92;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+
 .right-side {
   display: flex;
   width: 20%;
@@ -28,6 +98,18 @@
   flex-direction: column;
   align-items: center;
   align-content: center;
+}
+
+.history-content {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  width: 100%;
+  align-content: center;
+  align-items: center;
+  background: #f2efe8;
+  justify-content: start;
+  border-bottom: 1px solid #b08a92;
 }
 
 .middle-side {

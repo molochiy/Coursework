@@ -13,7 +13,7 @@ namespace Coursework.Web
 
         // notifications
         "~/Scripts/libs/toastr/toastr.js",
-
+        
         // angular libs
         "~/Scripts/libs/angularjs/angular.js",
         "~/Scripts/libs/angularjs/angular-base64.js",

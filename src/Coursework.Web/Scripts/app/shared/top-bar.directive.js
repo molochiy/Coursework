@@ -10,5 +10,4 @@
       templateUrl: '/Scripts/app/shared/pages/topBar.html'
     }
   }
-
 })(angular);

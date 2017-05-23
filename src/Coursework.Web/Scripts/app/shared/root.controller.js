@@ -39,7 +39,11 @@
       vm.userData.displayUserInfo();
     }
 
-    vm.userData.displayUserInfo();
+    function init() {
+      vm.userData.displayUserInfo();
+    }
+
+    init();
   }
 
 })(angular);

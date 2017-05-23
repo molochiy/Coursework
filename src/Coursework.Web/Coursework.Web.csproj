@@ -179,7 +179,6 @@
     <Content Include="Content\css\custom\common.css" />
     <Content Include="Content\css\custom\flexslider.css" />
     <Content Include="Content\css\custom\account.css" />
-    <Content Include="Content\css\custom\menu.css" />
     <Content Include="Content\css\custom\problem.css" />
     <Content Include="Content\css\custom\top-bar.css" />
     <Content Include="Content\css\custom\user.css" />
@@ -214,6 +213,7 @@
     <Content Include="Scripts\libs\flexslider\jquery.flexslider.js" />
     <Content Include="Scripts\libs\jquery\jquery-3.2.1.js" />
     <Content Include="Scripts\libs\jquery\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\libs\mathjax\MathJax.js" />
     <Content Include="Scripts\libs\plotly\plotly-latest.min.js" />
     <Content Include="Scripts\libs\toastr\toastr.js" />
     <Content Include="Web.config">
