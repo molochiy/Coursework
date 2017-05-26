@@ -1,5 +1,5 @@
 ﻿(function (angular) {
-  angular.module('appModule', ['ngRoute', 'ngCookies', 'base64', 'angularValidator'])
+  angular.module('appModule', ['momentjs', 'plotlyjs', 'datatablesjs', 'nicescrolljs', 'ngRoute', 'ngCookies', 'base64', 'angularValidator'])
     .config(config)
     .run(run);
 

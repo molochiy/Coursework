@@ -29,6 +29,7 @@
     color: #b08a92;
     border-radius: 5px;
     padding: 0 10px;
+    cursor: pointer;
   }
 
 .top-bar-right {

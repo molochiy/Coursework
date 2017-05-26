@@ -177,18 +177,28 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\css\custom\common.css" />
+    <Content Include="Content\css\custom\datatables.css" />
     <Content Include="Content\css\custom\flexslider.css" />
     <Content Include="Content\css\custom\account.css" />
     <Content Include="Content\css\custom\problem.css" />
     <Content Include="Content\css\custom\top-bar.css" />
     <Content Include="Content\css\custom\user.css" />
     <Content Include="Content\css\lib\bootstrap.min.css" />
+    <Content Include="Content\css\lib\datatables\buttons.dataTables.min.css" />
+    <Content Include="Content\css\lib\datatables\editor.dataTables.min.css" />
+    <Content Include="Content\css\lib\datatables\jquery.dataTables.min.css" />
+    <Content Include="Content\css\lib\datatables\responsive.dataTables.min.css" />
+    <Content Include="Content\css\lib\datatables\select.dataTables.min.css" />
+    <Content Include="Content\css\lib\jquery-ui\jquery-ui.min.css" />
     <Content Include="Content\css\lib\toastr.css" />
     <Content Include="Content\images\abstract-user-photo.png" />
     <Content Include="Content\images\bg_control_nav.png" />
     <Content Include="Content\images\bg_direction_nav.png" />
+    <Content Include="Content\images\left-arrow.png" />
+    <Content Include="Content\images\right-arrow.png" />
     <Content Include="Content\svg\expand-arrow-up.svg" />
     <Content Include="Content\svg\expand-arrow-down.svg" />
+    <Content Include="favicon.png" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\app\account\account.controller.js" />
     <Content Include="Scripts\app\account\account.service.js" />
@@ -197,6 +207,10 @@
     <Content Include="Scripts\app\problem1\problem1.controller.js" />
     <Content Include="Scripts\app\problem2\pages\problem2.html" />
     <Content Include="Scripts\app\shared\api.service.js" />
+    <Content Include="Scripts\app\shared\nicescroll.module.js" />
+    <Content Include="Scripts\app\shared\plotly.module.js" />
+    <Content Include="Scripts\app\shared\moment.module.js" />
+    <Content Include="Scripts\app\shared\datatables.module.js" />
     <Content Include="Scripts\app\shared\notification.service.js" />
     <Content Include="Scripts\app\shared\root.controller.js" />
     <Content Include="Scripts\app\problem2\problem2.controller.js" />
@@ -209,11 +223,25 @@
     <Content Include="Scripts\libs\angularjs\angular-validator.js" />
     <Content Include="Scripts\libs\angularjs\angular.js" />
     <Content Include="Scripts\libs\angularjs\angular.min.js" />
+    <Content Include="Scripts\libs\datatables\absolute.js" />
+    <Content Include="Scripts\libs\datatables\buttons.html5.min.js" />
+    <Content Include="Scripts\libs\datatables\buttons.print.min.js" />
+    <Content Include="Scripts\libs\datatables\dataTables.buttons.min.js" />
+    <Content Include="Scripts\libs\datatables\dataTables.responsive.min.js" />
+    <Content Include="Scripts\libs\datatables\dataTables.select.min.js" />
+    <Content Include="Scripts\libs\datatables\jquery.dataTables.min.js" />
+    <Content Include="Scripts\libs\datatables\jszip.min.js" />
+    <Content Include="Scripts\libs\datatables\pdfmake.min.js" />
+    <Content Include="Scripts\libs\datatables\row%28%29.show%28%29.js" />
+    <Content Include="Scripts\libs\datatables\vfs_fonts.js" />
     <Content Include="Scripts\libs\flexslider\jquery.flexslider-min.js" />
     <Content Include="Scripts\libs\flexslider\jquery.flexslider.js" />
+    <Content Include="Scripts\libs\jquery-ui\jquery-ui.min.js" />
+    <Content Include="Scripts\libs\jquery-ui\jquery.nicescroll.min.js" />
     <Content Include="Scripts\libs\jquery\jquery-3.2.1.js" />
     <Content Include="Scripts\libs\jquery\jquery-3.2.1.min.js" />
     <Content Include="Scripts\libs\mathjax\MathJax.js" />
+    <Content Include="Scripts\libs\moment\moment.min.js" />
     <Content Include="Scripts\libs\plotly\plotly-latest.min.js" />
     <Content Include="Scripts\libs\toastr\toastr.js" />
     <Content Include="Web.config">
@@ -283,7 +311,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>5983</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

@@ -1,12 +1,12 @@
 ﻿.problem-page-content {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-content: center;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-    padding-top: 1%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 1%;
 }
 
 .left-side {
@@ -39,11 +39,20 @@
   height: 10%;
   background: #b08a92;
   border-radius: 5px 5px 0 0;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
-.plot {
-    width: 95% !important;
-}
+  .problem-header span,
+  .history-header span {
+    color: #f2efe8;
+    font-size: 1.5vw;
+    display: block;
+    width: 90%;
+    word-wrap: break-word;
+    text-align: center;
+  }
 
 .problem-description {
   display: flex;
@@ -92,11 +101,12 @@
   color: #b08a92;
   border-radius: 5px;
   padding: 0 10px;
+  cursor: pointer;
 }
 
 .right-side {
   display: flex;
-  width: 20%;
+  width: 30%;
   height: 100%;
   background: #c2d4d8;
   justify-content: space-around;
@@ -117,20 +127,55 @@
   border-bottom: 1px solid #b08a92;
 }
 
+.history-table-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 90%;
+  align-content: center;
+  align-items: center;
+  justify-content: start;
+}
+
 .middle-side {
   display: flex;
-  width: 60%;
+  width: 50%;
   height: 100%;
   background: #dbe9d8;
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
   align-content: center;
+  flex-direction: row;
+}
+
+.middle-side .plot-left-arrow,
+.middle-side .plot-right-arrow {
+  display: flex;
+  height: 95%;
+  width: 5%;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.middle-side .plot-left-arrow img,
+.middle-side .plot-right-arrow img {
+  height: 24px;
+  width: 24px;
+}
+
+.plot-wrapper {
+  display: flex;
+  width: 90%;
+  height: 95%;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .plot {
   display: flex;
-  width: 80%;
-  height: 95%;
-  background: lightseagreen;
+  width: 100%;
+  height: 100%;
 }
