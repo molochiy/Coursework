@@ -4,6 +4,42 @@
       <div class="problem-header"></div>
       <div class="problem-description"></div>
       <div class="problem-fields">
+        <div style="padding-left:5%; padding-right:5%;">
+            <form>
+                <div class="form-group" style="text-align:left; align-content:center;">
+                    <label for="modulF">|F|</label>
+                    <input type="text" class="form-control" id="modulF" placeholder="|F|">
+                </div>
+                <div class="form-group" style="text-align:left;">
+                    <label for="argF">arg(F)</label>
+                    <input type="text" class="form-control" id="argF" placeholder="arg(F)">
+                </div>
+                <div class="form-group row" style="text-align:left;">
+                    <div class="col-md-6">
+                        <label for="M1">M<sub>1</sub></label>
+                        <input type="text" class="form-control" id="M1" placeholder="M1">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="M2">M<sub>2</sub></label>
+                        <input type="text" class="form-control" id="M2" placeholder="M2">
+                    </div>
+                </div>
+                <div class="form-group row" style="text-align:left;">
+                    <div class="col-md-6">
+                        <label for="C1">C<sub>1</sub></label>
+                        <input type="text" class="form-control" id="C1" placeholder="C1">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="C2">C<sub>2</sub></label>
+                        <input type="text" class="form-control" id="C2" placeholder="C2">
+                    </div>
+                </div>
+                <div class="form-group" style="text-align:left;">
+                    <label for="eps">e</label>
+                    <input type="text" class="form-control" id="eps" placeholder="e">
+                </div>
+             </form>  
+          </div>
       </div>
       <div class="problem-footer">
         <div class="problem-button">
@@ -76,21 +112,8 @@
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ]
     ];
 
-    z2 = [[0.698913, 0.653427, 0.530974, 0.367852, 0.207684, 0.084821, 0.013724, 0.011615, 0.009602, 0.000252, 0.005784,
-    ], [0.653427, 0.814505, 0.838120, 0.710846, 0.481766, 0.236925, 0.054897, 0.029513, 0.033009, 0.002153, 0.020106,
-    ], [0.530974, 0.838120, 1, 0.948406, 0.710367, 0.391839, 0.117779, 0.032950, 0.058377, 0.015702, 0.026618,
-    ], [0.367852, 0.710846, 0.948406, 0.978169, 0.791816, 0.478644, 0.173001, 0.019859, 0.072728, 0.033253, 0.022001,
-    ], [0.207684, 0.481766, 0.710367, 0.791816, 0.689622, 0.453694, 0.190428, 0.001583, 0.068299, 0.044256, 0.009633,
-    ], [0.084821, 0.236925, 0.391839, 0.478644, 0.453694, 0.327442, 0.158472, 0.018650, 0.047309, 0.041753, 0.002957,
-    ], [0.013724, 0.054897, 0.117779, 0.173001, 0.190428, 0.158472, 0.091902, 0.022578, 0.020324, 0.026912, 0.009195,
-    ], [0.011615, 0.029513, 0.032950, 0.019859, 0.001583, 0.018650, 0.022578, 0.013803, 0.000497, 0.007963, 0.007466,
-    ], [0.009602, 0.033009, 0.058377, 0.072728, 0.068299, 0.047309, 0.020324, 0.000497, 0.008530, 0.005501, 0.001348,
-    ], [0.000252, 0.002153, 0.015702, 0.033253, 0.044256, 0.041753, 0.026912, 0.007963, 0.005501, 0.008646, 0.003677,
-    ], [0.005784, 0.020106, 0.026618, 0.022001, 0.009633, 0.002957, 0.009195, 0.007466, 0.001348, 0.003677, 0.004284,
-    ]]
     // creating data objects..
     var data_z1 = { z: z1, type: 'surface' };
-    var data_z2 = { z: z2, type: 'surface' };
 
     var layout = {
         title: 'First Problem',
@@ -105,5 +128,4 @@
 
     // Plotting the surfaces..
     Plotly.newPlot('plot1', [data_z1], layout);
-    Plotly.newPlot('plot2', [data_z2], layout);
 </script>
