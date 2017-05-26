@@ -23,7 +23,7 @@
     display: flex;
     align-content: center;
     align-items: center;
-    width: 180px;
+    width: auto;
     height: 30px;
     background: #dbe9d8;
     color: #b08a92;

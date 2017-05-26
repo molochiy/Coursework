@@ -5,10 +5,10 @@
         <span class="user-greeting">Hello, <span class="user-login">{{rootCtrl.username}}</span></span>
       </div>
       <div ng-if="!rootCtrl.isFirstProblemSelected" class="problem-button">
-        <a ng-click="rootCtrl.selectFirstProblem()">First problem</a>
+        <a ng-click="rootCtrl.selectFirstProblem()">Знаходження розподілу струмів та діаграми направленості</a>
       </div>
       <div ng-if="rootCtrl.isFirstProblemSelected" class="problem-button">
-        <a ng-click="rootCtrl.selectSecondProblem()">Second problem</a>
+        <a ng-click="rootCtrl.selectSecondProblem()">Знаходження точок галуження </a>
       </div>
     </div>
   </div>
