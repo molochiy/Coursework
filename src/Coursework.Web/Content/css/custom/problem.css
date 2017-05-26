@@ -1,11 +1,12 @@
 ﻿.problem-page-content {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-content: center;
-  align-items: center;
-  flex-direction: row;
-  justify-content: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 1%;
 }
 
 .left-side {
@@ -22,7 +23,7 @@
 .input-menu {
   display: flex;
   flex-direction: column;
-  height: 90%;
+  height: 100%;
   width: 90%;
   align-content: center;
   align-items: center;
@@ -40,6 +41,10 @@
   border-radius: 5px 5px 0 0;
 }
 
+.plot {
+    width: 95% !important;
+}
+
 .problem-description {
   display: flex;
   flex-direction: column;
@@ -55,7 +60,7 @@
 .problem-fields {
   display: flex;
   flex-direction: column;
-  height: 55%;
+  height: 60%;
   width: 100%;
   align-content: center;
   align-items: center;
@@ -68,7 +73,7 @@
 .history-footer {
   display: flex;
   flex-direction: column;
-  height: 10%;
+  height: 5%;
   width: 100%;
   align-content: center;
   align-items: center;
@@ -82,7 +87,7 @@
   align-content: center;
   align-items: center;
   width: 120px;
-  height: 40px;
+  height: 30px;
   background: #dbe9d8;
   color: #b08a92;
   border-radius: 5px;
@@ -103,7 +108,7 @@
 .history-content {
   display: flex;
   flex-direction: column;
-  height: 80%;
+  height: 85%;
   width: 100%;
   align-content: center;
   align-items: center;
@@ -126,6 +131,6 @@
 .plot {
   display: flex;
   width: 80%;
-  height: 40%;
+  height: 95%;
   background: lightseagreen;
 }
