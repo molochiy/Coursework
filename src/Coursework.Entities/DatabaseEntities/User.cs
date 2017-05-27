@@ -7,8 +7,8 @@ namespace Coursework.Entities.DatabaseEntities
     public User()
     {
       Roles = new HashSet<Role>();
-      AntennasSynthesisProblems = new List<AntennasSynthesisProblem>();
-      BranchingLinesProblems = new List<BranchingLinesProblem>();
+      AntennasSynthesisProblems = new List<AntennasRadiationPatternProblem>();
+      BranchingLinesProblems = new List<BranchingPointsProblem>();
     }
 
     public string Username { get; set; }
@@ -16,7 +16,7 @@ namespace Coursework.Entities.DatabaseEntities
     public string HashedPassword { get; set; }
 
     public virtual ICollection<Role> Roles { get; set; }
-    public virtual ICollection<AntennasSynthesisProblem> AntennasSynthesisProblems { get; set; }
-    public virtual ICollection<BranchingLinesProblem> BranchingLinesProblems { get; set; }
+    public virtual ICollection<AntennasRadiationPatternProblem> AntennasSynthesisProblems { get; set; }
+    public virtual ICollection<BranchingPointsProblem> BranchingLinesProblems { get; set; }
   }
 }

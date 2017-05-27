@@ -88,6 +88,10 @@
     <Compile Include="Migrations\201705222111224_changed ProblemResult column type.Designer.cs">
       <DependentUpon>201705222111224_changed ProblemResult column type.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705271057380_Renaming of problems names.cs" />
+    <Compile Include="Migrations\201705271057380_Renaming of problems names.Designer.cs">
+      <DependentUpon>201705271057380_Renaming of problems names.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -111,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705222111224_changed ProblemResult column type.resx">
       <DependentUpon>201705222111224_changed ProblemResult column type.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705271057380_Renaming of problems names.resx">
+      <DependentUpon>201705271057380_Renaming of problems names.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

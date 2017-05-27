@@ -2,7 +2,7 @@
 
 namespace Coursework.Repositories.Configuration
 {
-  public class AntennasSynthesisProblemConfiguration: EntityBaseConfiguration<AntennasSynthesisProblem>
+  public class AntennasSynthesisProblemConfiguration: EntityBaseConfiguration<AntennasRadiationPatternProblem>
   {
     public AntennasSynthesisProblemConfiguration()
     {

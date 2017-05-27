@@ -18,13 +18,13 @@ namespace Coursework.Services.Concrete
       _mapper = mapper;
     }
 
-    public List<Entities.ServicesEntities.AntennasSynthesisProblem> GetAntennasSynthesisProblemByUserId(int userId)
+    public List<Entities.ServicesEntities.AntennasRadiationPatternProblem> GetAntennasSynthesisProblemByUserId(int userId)
     {
-      List<Entities.ServicesEntities.AntennasSynthesisProblem> result = new List<Entities.ServicesEntities.AntennasSynthesisProblem>();
-      var problemList = _repository.Get<Entities.DatabaseEntities.AntennasSynthesisProblem>(u => u.UserId == userId);
+      List<Entities.ServicesEntities.AntennasRadiationPatternProblem> result = new List<Entities.ServicesEntities.AntennasRadiationPatternProblem>();
+      var problemList = _repository.Get<Entities.DatabaseEntities.AntennasRadiationPatternProblem>(u => u.UserId == userId);
       foreach (var problem in problemList)
       {
-        result.Add(new Entities.ServicesEntities.AntennasSynthesisProblem
+        result.Add(new Entities.ServicesEntities.AntennasRadiationPatternProblem
         {
           CreationDate = problem.CreationDate,
           FModule = problem.FModule,
@@ -42,13 +42,13 @@ namespace Coursework.Services.Concrete
       return result;
     }
 
-    public List<Entities.ServicesEntities.BranchingLinesProblem> GetBranchingLinesProblemByUserId(int userId)
+    public List<Entities.ServicesEntities.BranchingPointsProblem> GetBranchingLinesProblemByUserId(int userId)
     {
-      List<Entities.ServicesEntities.BranchingLinesProblem> result = new List<Entities.ServicesEntities.BranchingLinesProblem>();
-      var problemList = _repository.Get<Entities.DatabaseEntities.BranchingLinesProblem>(u => u.UserId == userId);
+      List<Entities.ServicesEntities.BranchingPointsProblem> result = new List<Entities.ServicesEntities.BranchingPointsProblem>();
+      var problemList = _repository.Get<Entities.DatabaseEntities.BranchingPointsProblem>(u => u.UserId == userId);
       foreach (var problem in problemList)
       {
-        result.Add(new Entities.ServicesEntities.BranchingLinesProblem
+        result.Add(new Entities.ServicesEntities.BranchingPointsProblem
         {
           CreationDate = problem.CreationDate,
           FModule = problem.FModule,

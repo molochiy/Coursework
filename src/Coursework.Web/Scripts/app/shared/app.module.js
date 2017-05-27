@@ -13,14 +13,14 @@
           controllerAs: "accountCtrl"
         })
         .when("/problem1", {
-          templateUrl: "Scripts/app/problem1/pages/problem1.html",
-          controller: "problem1Controller",
-          controllerAs: "problem1Ctrl"
+          templateUrl: "Scripts/app/antennas-radiation-pattern-problem/pages/antennas-radiation-pattern-problem.html",
+          controller: "antennasRadiationPatternProblemController",
+          controllerAs: "aRPPCtrl"
         })
         .when("/problem2", {
-          templateUrl: "Scripts/app/problem2/pages/problem2.html",
-          controller: "problem2Controller",
-          controllerAs: "problem2Ctrl"
+          templateUrl: "Scripts/app/branching-points-problem/pages/branching-points-problem.html",
+          controller: "branchingPointsProblemController",
+          controllerAs: "bPPCtrl"
         })
         //.when("/customers", {
         //  templateUrl: "scripts/spa/customers/problems.html",

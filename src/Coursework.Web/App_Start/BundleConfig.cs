@@ -52,8 +52,8 @@ namespace Coursework.Web
         "~/Scripts/app/home/index.controller.js",
         "~/Scripts/app/account/account.service.js",
         "~/Scripts/app/account/account.controller.js",
-        "~/Scripts/app/problem1/problem1.controller.js",
-        "~/Scripts/app/problem2/problem2.controller.js",
+        "~/Scripts/app/antennas-radiation-pattern-problem/antennas-radiation-pattern-problem.controller.js",
+        "~/Scripts/app/branching-points-problem/branching-points-problem.controller.js",
 
         // praph
         "~/Scripts/libs/plotly/plotly-latest.min.js"));

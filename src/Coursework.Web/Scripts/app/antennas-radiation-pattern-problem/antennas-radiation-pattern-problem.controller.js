@@ -2,11 +2,11 @@
 
   angular
       .module("appModule")
-      .controller("problem1Controller", problem1Controller);
+      .controller("antennasRadiationPatternProblemController", antennasRadiationPatternProblemController);
 
-  problem1Controller.$inject = ['$scope', '$location'];
+  antennasRadiationPatternProblemController.$inject = ['$scope', '$location'];
 
-  function problem1Controller($scope, $location) {
+  function antennasRadiationPatternProblemController($scope, $location) {
     var vm = this;
 
     vm.problemInputData = {};

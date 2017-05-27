@@ -56,12 +56,12 @@
   <ItemGroup>
     <Compile Include="AutofacModule.cs" />
     <Compile Include="DatabaseEntities\EntityBase.cs" />
-    <Compile Include="DatabaseEntities\AntennasSynthesisProblem.cs" />
+    <Compile Include="DatabaseEntities\AntennasRadiationPatternProblem.cs" />
     <Compile Include="DatabaseEntities\ProblemBase.cs" />
     <Compile Include="DatabaseEntities\ProblemResult.cs" />
-    <Compile Include="DatabaseEntities\BranchingLinesProblem.cs" />
-    <Compile Include="ServicesEntities\AntennasSynthesisProblem.cs" />
-    <Compile Include="ServicesEntities\BranchingLinesProblem.cs" />
+    <Compile Include="DatabaseEntities\BranchingPointsProblem.cs" />
+    <Compile Include="ServicesEntities\AntennasRadiationPatternProblem.cs" />
+    <Compile Include="ServicesEntities\BranchingPointsProblem.cs" />
     <Compile Include="ServicesEntities\ProblemResult.cs" />
     <Compile Include="ServicesEntities\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -203,9 +203,9 @@
     <Content Include="Scripts\app\account\account.controller.js" />
     <Content Include="Scripts\app\account\account.service.js" />
     <Content Include="Scripts\app\account\pages\account.html" />
-    <Content Include="Scripts\app\problem1\pages\problem1.html" />
-    <Content Include="Scripts\app\problem1\problem1.controller.js" />
-    <Content Include="Scripts\app\problem2\pages\problem2.html" />
+    <Content Include="Scripts\app\antennas-radiation-pattern-problem\pages\antennas-radiation-pattern-problem.html" />
+    <Content Include="Scripts\app\antennas-radiation-pattern-problem\antennas-radiation-pattern-problem.controller.js" />
+    <Content Include="Scripts\app\branching-points-problem\pages\branching-points-problem.html" />
     <Content Include="Scripts\app\shared\api.service.js" />
     <Content Include="Scripts\app\shared\nicescroll.module.js" />
     <Content Include="Scripts\app\shared\plotly.module.js" />
@@ -213,7 +213,7 @@
     <Content Include="Scripts\app\shared\datatables.module.js" />
     <Content Include="Scripts\app\shared\notification.service.js" />
     <Content Include="Scripts\app\shared\root.controller.js" />
-    <Content Include="Scripts\app\problem2\problem2.controller.js" />
+    <Content Include="Scripts\app\branching-points-problem\branching-points-problem.controller.js" />
     <Content Include="Scripts\app\shared\app.module.js" />
     <Content Include="Scripts\app\shared\pages\topBar.html" />
     <Content Include="Scripts\app\shared\top-bar.directive.js" />

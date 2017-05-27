@@ -18,11 +18,11 @@ namespace Coursework.Services.Concrete
       _mapper = mapper;
     }
 
-    public bool SetAntennasSynthesisProblem(Entities.ServicesEntities.AntennasSynthesisProblem pr)
+    public bool SetAntennasSynthesisProblem(Entities.ServicesEntities.AntennasRadiationPatternProblem pr)
     {
       try
       {
-        var createdUser = _repository.Insert(new Entities.DatabaseEntities.AntennasSynthesisProblem
+        var createdUser = _repository.Insert(new Entities.DatabaseEntities.AntennasRadiationPatternProblem
         {
           C1 = pr.C1,
           C2 = pr.C2,
@@ -43,11 +43,11 @@ namespace Coursework.Services.Concrete
       }
     }
 
-    public bool SetBranchingLinesProblem(Entities.ServicesEntities.BranchingLinesProblem pr)
+    public bool SetBranchingLinesProblem(Entities.ServicesEntities.BranchingPointsProblem pr)
     {
       try
       {
-        var createdUser = _repository.Insert(new Entities.DatabaseEntities.BranchingLinesProblem
+        var createdUser = _repository.Insert(new Entities.DatabaseEntities.BranchingPointsProblem
         {
           CreationDate = pr.CreationDate,
           Eps = pr.Eps,

@@ -2,7 +2,7 @@
 
 namespace Coursework.Repositories.Configuration
 {
-  public class BranchingLinesProblemConfiguration: EntityBaseConfiguration<BranchingLinesProblem>
+  public class BranchingLinesProblemConfiguration: EntityBaseConfiguration<BranchingPointsProblem>
   {
     public BranchingLinesProblemConfiguration()
     {

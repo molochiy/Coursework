@@ -2,7 +2,7 @@
 
 namespace Coursework.Entities.ServicesEntities
 {
-  public class AntennasSynthesisProblem
+  public class BranchingPointsProblem
 
   {
     public DateTime CreationDate { get; set; }
@@ -11,8 +11,6 @@ namespace Coursework.Entities.ServicesEntities
     public string FArgument { get; set; }
     public int M1 { get; set; }
     public int M2 { get; set; }
-    public double C1 { get; set; }
-    public double C2 { get; set; }
     public int StateId { get; set; }
     public int UserId { get; set; }
   }

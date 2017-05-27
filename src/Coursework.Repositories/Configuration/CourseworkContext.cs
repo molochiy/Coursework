@@ -17,8 +17,8 @@ namespace Coursework.Repositories.Configuration
       Database.SetInitializer<CourseworkContext>(null);
     }
 
-    public DbSet<AntennasSynthesisProblem> AntennasSynthesisProblems { get; set; }
-    public DbSet<BranchingLinesProblem> BranchingLinesProblems { get; set; }
+    public DbSet<AntennasRadiationPatternProblem> AntennasSynthesisProblems { get; set; }
+    public DbSet<BranchingPointsProblem> BranchingLinesProblems { get; set; }
     public DbSet<ProblemResult> ProblemResults { get; set; }
     public DbSet<Role> Roles { get; set; }
     public DbSet<State> States { get; set; }

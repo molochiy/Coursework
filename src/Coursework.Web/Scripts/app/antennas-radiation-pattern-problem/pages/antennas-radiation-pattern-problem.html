@@ -11,41 +11,41 @@
         <div style="padding-left:5%; padding-right:5%;">
           <div class="form-group" style="text-align:left; align-content:center;">
             <label for="moduleF">|F|</label>
-            <input type="text" class="form-control" id="moduleF" ng-model="problem1Ctrl.problemInputData.moduleF" placeholder="|F|">
+            <input type="text" class="form-control" id="moduleF" ng-model="aRPPCtrl.problemInputData.moduleF" placeholder="|F|">
           </div>
           <div class="form-group" style="text-align:left;">
             <label for="argF">arg(F)</label>
-            <input type="text" class="form-control" id="argF" ng-model="problem1Ctrl.problemInputData.argF" placeholder="arg(F)">
+            <input type="text" class="form-control" id="argF" ng-model="aRPPCtrl.problemInputData.argF" placeholder="arg(F)">
           </div>
           <div class="form-group row" style="text-align:left;">
             <div class="col-md-6">
               <label for="M1">M<sub>1</sub></label>
-              <input type="text" class="form-control" id="M1" ng-model="problem1Ctrl.problemInputData.M1" placeholder="M1">
+              <input type="text" class="form-control" id="M1" ng-model="aRPPCtrl.problemInputData.M1" placeholder="M1">
             </div>
             <div class="col-md-6">
               <label for="M2">M<sub>2</sub></label>
-              <input type="text" class="form-control" id="M2" ng-model="problem1Ctrl.problemInputData.M2" placeholder="M2">
+              <input type="text" class="form-control" id="M2" ng-model="aRPPCtrl.problemInputData.M2" placeholder="M2">
             </div>
           </div>
           <div class="form-group row" style="text-align:left;">
             <div class="col-md-6">
               <label for="C1">C<sub>1</sub></label>
-              <input type="text" class="form-control" id="C1" ng-model="problem1Ctrl.problemInputData.C1" placeholder="C1">
+              <input type="text" class="form-control" id="C1" ng-model="aRPPCtrl.problemInputData.C1" placeholder="C1">
             </div>
             <div class="col-md-6">
               <label for="C2">C<sub>2</sub></label>
-              <input type="text" class="form-control" id="C2" ng-model="problem1Ctrl.problemInputData.C2" placeholder="C2">
+              <input type="text" class="form-control" id="C2" ng-model="aRPPCtrl.problemInputData.C2" placeholder="C2">
             </div>
           </div>
           <div class="form-group" style="text-align:left;">
             <label for="eps">e</label>
-            <input type="text" class="form-control" id="eps" ng-model="problem1Ctrl.problemInputData.eps" placeholder="e">
+            <input type="text" class="form-control" id="eps" ng-model="aRPPCtrl.problemInputData.eps" placeholder="e">
           </div>
         </div>
       </div>
       <div class="problem-footer">
         <div class="problem-button">
-          <a ng-click="problem1Ctrl.solve()">Solve</a>
+          <a ng-click="aRPPCtrl.solve()">Solve</a>
         </div>
       </div>
     </div>
@@ -53,16 +53,16 @@
 
   <div class="middle-side">
     <div class="plot-left-arrow">
-      <img src="/Content/images/left-arrow.png" ng-click="problem1Ctrl.swapGraph()" />
+      <img src="/Content/images/left-arrow.png" ng-click="aRPPCtrl.swapGraph()" />
     </div>
-    <div ng-if="problem1Ctrl.isFirstGraphShowing" class="plot-wrapper">
+    <div ng-if="aRPPCtrl.isFirstGraphShowing" class="plot-wrapper">
       <div id="plot1" class="plot">plot1</div>
     </div>
-    <div ng-if="!problem1Ctrl.isFirstGraphShowing" class="plot-wrapper">
+    <div ng-if="!aRPPCtrl.isFirstGraphShowing" class="plot-wrapper">
       <div id="plot2" class="plot">plot2</div>
     </div>
     <div class="plot-right-arrow">
-      <img src="/Content/images/right-arrow.png" ng-click="problem1Ctrl.swapGraph()" />
+      <img src="/Content/images/right-arrow.png" ng-click="aRPPCtrl.swapGraph()" />
     </div>
   </div>
 
@@ -82,7 +82,7 @@
       </div>
       <div class="history-footer">
         <div class="problem-button">
-          <a ng-click="problem1Ctrl.show()">Show</a>
+          <a ng-click="aRPPCtrl.show()">Show</a>
         </div>
       </div>
     </div>
@@ -94,7 +94,7 @@
 
   function InitScrollBar(containerId) {
     $(containerId).niceScroll({
-      cursorcolor: '#03a9f4',
+      cursorcolor: '#b08a92',
       autohidemode: 'scroll',
       cursorborder: 'none',
       cursorwidth: '6px',

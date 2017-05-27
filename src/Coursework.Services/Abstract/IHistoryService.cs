@@ -5,9 +5,9 @@ namespace Coursework.Services.Abstract
 {
   public interface IHistoryService
   {
-    List<AntennasSynthesisProblem> GetAntennasSynthesisProblemByUserId(int userId);
+    List<AntennasRadiationPatternProblem> GetAntennasSynthesisProblemByUserId(int userId);
 
-    List<BranchingLinesProblem> GetBranchingLinesProblemByUserId(int userId);
+    List<BranchingPointsProblem> GetBranchingLinesProblemByUserId(int userId);
 
     ProblemResult GetProblemResultById(int resultId);
   }

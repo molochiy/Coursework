@@ -26,11 +26,11 @@ namespace Coursework.Web.ApiControllers
 
     [Route("submit/problem1")]
     [HttpPost]
-    public HttpResponseMessage SubmitAntennasSynthesisProblem(HttpRequestMessage request, AntennasSynthesisProblem problem)
+    public HttpResponseMessage SubmitAntennasSynthesisProblem(HttpRequestMessage request, AntennasRadiationPatternProblem problem)
     {
       var userID = _membershipService.GetUserIdByLogin(HttpContext.Current.User.Identity.Name);
 
-      bool result = _problemService.SetAntennasSynthesisProblem(new AntennasSynthesisProblem
+      bool result = _problemService.SetAntennasSynthesisProblem(new AntennasRadiationPatternProblem
       {
         CreationDate = System.DateTime.Now,
         FModule = problem.FModule,
@@ -48,11 +48,11 @@ namespace Coursework.Web.ApiControllers
 
     [Route("submit/problem2")]
     [HttpPost]
-    public HttpResponseMessage SubmitBranchingLinesProblem(HttpRequestMessage request, BranchingLinesProblem problem)
+    public HttpResponseMessage SubmitBranchingLinesProblem(HttpRequestMessage request, BranchingPointsProblem problem)
     {
       var userID = _membershipService.GetUserIdByLogin(HttpContext.Current.User.Identity.Name);
 
-      bool result = _problemService.SetBranchingLinesProblem(new BranchingLinesProblem
+      bool result = _problemService.SetBranchingLinesProblem(new BranchingPointsProblem
       {
         CreationDate = System.DateTime.Now,
         FModule = problem.FModule,
