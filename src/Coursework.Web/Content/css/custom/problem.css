@@ -87,7 +87,7 @@
 }
 
 .problem-description-content {
-  display: flex;
+  display: inline-block;
   height: 100%;
   width: 100%;
   justify-content: center;
