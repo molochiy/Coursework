@@ -7,16 +7,12 @@
   accountService.$inject = ['apiService', 'notificationService', '$http', '$base64', '$cookieStore', '$rootScope'];
 
   function accountService(apiService, notificationService, $http, $base64, $cookieStore, $rootScope) {
-    function login(user, completed) {
-      apiService.post('/api/account/authenticate', user,
-      completed,
-      loginFailed);
+    function login(user) {
+      return  apiService.post('/api/account/authenticate', user);
     }
 
-    function register(user, completed) {
-      apiService.post('/api/account/register', user,
-      completed,
-      registrationFailed);
+    function register(user) {
+      return apiService.post('/api/account/register', user);
     }
 
     function saveCredentials(user) {
@@ -38,14 +34,6 @@
       $cookieStore.remove('repository');
       $http.defaults.headers.common.Authorization = '';
     };
-
-    function loginFailed(response) {
-      notificationService.displayError(response.data);
-    }
-
-    function registrationFailed() {
-      notificationService.displayError('Registration failed. Try again.');
-    }
 
     function isUserLoggedIn() {
       return $rootScope.repository.loggedUser != null;

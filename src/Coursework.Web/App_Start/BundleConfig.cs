@@ -40,11 +40,11 @@ namespace Coursework.Web
         "~/Scripts/libs/angularjs/angular-validator.js",
 
         // angular apps
-        "~/Scripts/app/shared/nicescroll.module.js",
-        "~/Scripts/app/shared/datatables.module.js",
-        "~/Scripts/app/shared/moment.module.js",
-        "~/Scripts/app/shared/plotly.module.js",
         "~/Scripts/app/shared/app.module.js",
+        "~/Scripts/app/shared/nicescroll.service.js",
+        "~/Scripts/app/shared/datatables.service.js",
+        "~/Scripts/app/shared/moment.service.js",
+        "~/Scripts/app/shared/plotly.service.js",
         "~/Scripts/app/shared/app.constants.js",
         "~/Scripts/app/shared/top-bar.directive.js",
         "~/Scripts/app/shared/root.controller.js",
@@ -55,6 +55,7 @@ namespace Coursework.Web
         "~/Scripts/app/account/account.controller.js",
         "~/Scripts/app/antennas-radiation-pattern-problem/antennas-radiation-pattern-problem.controller.js",
         "~/Scripts/app/antennas-radiation-pattern-problem/antennas-radiation-pattern-problem.service.js",
+        "~/Scripts/app/antennas-radiation-pattern-problem/arpp-history.directive.js",
         "~/Scripts/app/branching-points-problem/branching-points-problem.controller.js",
 
         // praph

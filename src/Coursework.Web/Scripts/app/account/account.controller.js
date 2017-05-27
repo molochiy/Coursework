@@ -13,7 +13,13 @@
     vm.loginUser = {};
 
     function login() {
-      accountService.login(vm.loginUser, loginCompleted);
+      accountService.login(vm.loginUser)
+      .then(response => loginCompleted(response))
+      .catch(response => loginFailed(response));
+    }
+
+    function loginFailed(response) {
+      notificationService.displayError(response.data);
     }
 
     function loginCompleted(result) {
@@ -32,7 +38,9 @@
     vm.registerUser = {};
 
     function register() {
-      accountService.register(vm.registerUser, registerCompleted);
+      accountService.register(vm.registerUser)
+      .then(response => registerCompleted(response))
+      .catch(response => registrationFailed());
     }
 
     function registerCompleted(result) {
@@ -45,6 +53,10 @@
       else {
         notificationService.displayError('Registration failed. Try again.');
       }
+    }
+
+    function registrationFailed() {
+      notificationService.displayError('Registration failed. Try again.');
     }
 
     function init() {

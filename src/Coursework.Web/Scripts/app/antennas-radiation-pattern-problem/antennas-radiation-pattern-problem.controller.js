@@ -9,7 +9,7 @@
   function antennasRadiationPatternProblemController($scope, $location, PROBLEM_TYPE_IDS, antennasRadiationPatternProblemService, notificationService) {
     var vm = this;
 
-    vm.getProblemHistory = [];
+    vm.problemsHistory = [];
 
     vm.problemInputData = {};
 
@@ -47,7 +47,10 @@
       antennasRadiationPatternProblemService.getProblemHistory(vm.problemInputData.typeId)
       .then(response => {
         console.log(response);
-      })
+          $scope.$applyAsync(() => {
+            vm.problemsHistory.push.apply(vm.problemsHistory, response.data);
+          });
+        })
       .catch(response => {
         onError(response);
       });

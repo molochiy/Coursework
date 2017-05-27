@@ -1,5 +1,5 @@
 ﻿(function (angular) {
-  angular.module('momentjs', [])
+  angular.module("appModule")
     .factory('moment', moment);
 
   moment.$inject = ['$window'];

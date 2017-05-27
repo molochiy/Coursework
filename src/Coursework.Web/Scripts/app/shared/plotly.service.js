@@ -1,5 +1,5 @@
 ﻿(function (angular) {
-  angular.module('plotlyjs', [])
+  angular.module("appModule")
     .factory('plotly', plotly);
 
   plotly.$inject = ['$window'];
