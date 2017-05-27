@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Linq;
-using System.Security.Principal;
-using Coursework.Entities.DatabaseEntities;
+using System.Collections.Generic;
 using Coursework.Entities.ServicesEntities;
 using Coursework.Entities.TypeMapping.Abstract;
 using Coursework.Repositories.Abstract;
@@ -18,52 +16,29 @@ namespace Coursework.Services.Concrete
       _mapper = mapper;
     }
 
-    public bool SetAntennasSynthesisProblem(Entities.ServicesEntities.AntennasRadiationPatternProblem pr)
+    public Problem AddProblem(Problem problem)
     {
-      try
-      {
-        var createdUser = _repository.Insert(new Entities.DatabaseEntities.AntennasRadiationPatternProblem
-        {
-          C1 = pr.C1,
-          C2 = pr.C2,
-          CreationDate = pr.CreationDate,
-          Eps = pr.Eps,
-          FArgument = pr.FArgument,
-          FModule = pr.FModule,
-          M1 = pr.M1,
-          M2 = pr.M2,
-          StateId = pr.StateId,
-          UserId = pr.UserId,
-        });
-        return true;
-      }
-      catch (Exception)
-      {
-        return false;
-      }
+      var stateId = _repository.GetSingle<Entities.DatabaseEntities.State>(s => s.Name == "Queued").Id;
+
+      problem.StateId = stateId;
+      problem.CreationDate = DateTime.Now;
+
+      var problemEntity = _mapper.Map<Entities.DatabaseEntities.Problem>(problem);
+
+      var addedProblemEntity = _repository.Insert(problemEntity);
+
+      var addedProblem = _mapper.Map<Problem>(addedProblemEntity);
+
+      return addedProblem;
     }
 
-    public bool SetBranchingLinesProblem(Entities.ServicesEntities.BranchingPointsProblem pr)
+    public List<Problem> GetProblems(int userId, int problemTypeId)
     {
-      try
-      {
-        var createdUser = _repository.Insert(new Entities.DatabaseEntities.BranchingPointsProblem
-        {
-          CreationDate = pr.CreationDate,
-          Eps = pr.Eps,
-          FArgument = pr.FArgument,
-          FModule = pr.FModule,
-          M1 = pr.M1,
-          M2 = pr.M2,
-          StateId = pr.StateId,
-          UserId = pr.UserId,
-        });
-        return true;
-      }
-      catch (Exception)
-      {
-        return false;
-      }
+      var problemEntities = _repository.Get<Entities.DatabaseEntities.Problem>(p => p.UserId == userId && p.TypeId == problemTypeId);
+
+      var problems = _mapper.Map<List<Problem>>(problemEntities);
+
+      return problems;
     }
   }
 }

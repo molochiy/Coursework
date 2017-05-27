@@ -2,44 +2,51 @@
   angular.module("appModule")
     .factory('apiService', apiService);
 
-  apiService.$inject = ['$http', '$location', 'notificationService', '$rootScope'];
+  apiService.$inject = ['$http', '$q', '$location', 'notificationService', '$rootScope'];
 
-  function apiService($http, $location, notificationService, $rootScope) {
+  function apiService($http, $q, $location, notificationService, $rootScope) {
     var service = {
       get: get,
       post: post
     };
 
-    function get(url, config, success, failure) {
-      return $http.get(url, config)
-              .then(function (result) {
-                success(result);
-              }, function (error) {
-                if (error.status == '401') {
-                  notificationService.displayError('Authentication required.');
-                  $rootScope.previousState = $location.path();
-                  $location.path('/');
-                }
-                else if (failure != null) {
-                  failure(error);
-                }
-              });
+    function get(url, config) {
+      return $q((resolve, reject) => {
+        $http.get(url, config)
+          .then(result => {
+            resolve(result);
+          },
+            error => {
+              if (error.status == '401') {
+                notificationService.displayError('Authentication required.');
+                $rootScope.previousState = $location.path();
+                $location.path('/');
+              } else {
+                reject(error);
+              }
+            })
+        .catch(response => {
+            resolve(response);
+          });
+      });
     }
 
-    function post(url, data, success, failure) {
-      return $http.post(url, data)
-              .then(function (result) {
-                success(result);
-              }, function (error) {
-                if (error.status == '401') {
-                  notificationService.displayError('Authentication required.');
-                  $rootScope.previousState = $location.path();
-                  $location.path('/');
-                }
-                else if (failure != null) {
-                  failure(error);
-                }
-              });
+    function post(url, data) {
+      return $q((resolve, reject) => {
+        $http.post(url, data)
+          .then(result => {
+            resolve(result);
+          },
+            error => {
+              if (error.status == '401') {
+                notificationService.displayError('Authentication required.');
+                $rootScope.previousState = $location.path();
+                $location.path('/');
+              } else {
+                reject(error);
+              }
+            });
+      });
     }
 
     return service;

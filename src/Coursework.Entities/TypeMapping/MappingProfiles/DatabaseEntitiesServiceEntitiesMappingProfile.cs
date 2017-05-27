@@ -8,8 +8,14 @@ namespace Coursework.Entities.TypeMapping.MappingProfiles
     public DatabaseEntitiesServiceEntitiesMappingProfile()
     {
       CreateMap<DatabaseEntities.User, User>();
-      CreateMap<DatabaseEntities.AntennasRadiationPatternProblem, AntennasRadiationPatternProblem>();
-      CreateMap<DatabaseEntities.BranchingPointsProblem, BranchingPointsProblem>();
+
+      CreateMap<DatabaseEntities.Problem, Problem>();
+
+      CreateMap<Problem, DatabaseEntities.Problem>()
+        .ForMember(pe => pe.Id, p => p.Ignore())
+        .ForMember(pe => pe.TaskId, p => p.Ignore())
+        .ForMember(pe => pe.ResultId, p => p.Ignore());
+
       CreateMap<DatabaseEntities.ProblemResult, ProblemResult>();
     }
   }

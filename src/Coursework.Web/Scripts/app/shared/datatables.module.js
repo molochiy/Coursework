@@ -14,7 +14,7 @@
         $window.datatables = undefined;
       }
     }
-    var datatablesjs = $window._thirdParty.datatables;
-    return datatablesjs;
+
+    return  $window._thirdParty.datatables;
   };
 })(angular);

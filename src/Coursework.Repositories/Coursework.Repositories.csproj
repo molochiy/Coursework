@@ -68,9 +68,9 @@
     <Compile Include="Concrete\Disposable.cs" />
     <Compile Include="Configuration\CourseworkContext.cs" />
     <Compile Include="Configuration\EntityBaseConfiguration.cs" />
-    <Compile Include="Configuration\AntennasSynthesisProblemConfiguration.cs" />
-    <Compile Include="Configuration\BranchingLinesProblemConfiguration.cs" />
+    <Compile Include="Configuration\ProblemConfiguration.cs" />
     <Compile Include="Configuration\ProblemResultConfiguration.cs" />
+    <Compile Include="Configuration\ProblemTypeConfiguration.cs" />
     <Compile Include="Configuration\RoleConfiguration.cs" />
     <Compile Include="Configuration\StateConfiguration.cs" />
     <Compile Include="Configuration\UserConfiguration.cs" />
@@ -91,6 +91,10 @@
     <Compile Include="Migrations\201705271057380_Renaming of problems names.cs" />
     <Compile Include="Migrations\201705271057380_Renaming of problems names.Designer.cs">
       <DependentUpon>201705271057380_Renaming of problems names.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705271528314_Replace brolems to single problem, added problem type.cs" />
+    <Compile Include="Migrations\201705271528314_Replace brolems to single problem, added problem type.Designer.cs">
+      <DependentUpon>201705271528314_Replace brolems to single problem, added problem type.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -118,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705271057380_Renaming of problems names.resx">
       <DependentUpon>201705271057380_Renaming of problems names.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705271528314_Replace brolems to single problem, added problem type.resx">
+      <DependentUpon>201705271528314_Replace brolems to single problem, added problem type.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

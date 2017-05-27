@@ -1,11 +1,12 @@
-﻿using Coursework.Entities.ServicesEntities;
+﻿using System.Collections.Generic;
+using Coursework.Entities.ServicesEntities;
 
 namespace Coursework.Services.Abstract
 {
   public interface IProblemService
   {
-    bool SetAntennasSynthesisProblem(AntennasRadiationPatternProblem problem);
+    Problem AddProblem(Problem problem);
 
-    bool SetBranchingLinesProblem(BranchingPointsProblem problem);
+    List<Problem> GetProblems(int userId, int problemTypeId);
   }
 }

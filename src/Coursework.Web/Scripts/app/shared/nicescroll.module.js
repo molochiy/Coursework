@@ -14,7 +14,7 @@
         $window.nicescroll = undefined;
       }
     }
-    var nicescrolljs = $window._thirdParty.nicescroll;
-    return nicescrolljs;
+
+    return $window._thirdParty.nicescroll;
   };
 })(angular);

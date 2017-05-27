@@ -45,6 +45,7 @@ namespace Coursework.Web
         "~/Scripts/app/shared/moment.module.js",
         "~/Scripts/app/shared/plotly.module.js",
         "~/Scripts/app/shared/app.module.js",
+        "~/Scripts/app/shared/app.constants.js",
         "~/Scripts/app/shared/top-bar.directive.js",
         "~/Scripts/app/shared/root.controller.js",
         "~/Scripts/app/shared/notification.service.js",
@@ -53,6 +54,7 @@ namespace Coursework.Web
         "~/Scripts/app/account/account.service.js",
         "~/Scripts/app/account/account.controller.js",
         "~/Scripts/app/antennas-radiation-pattern-problem/antennas-radiation-pattern-problem.controller.js",
+        "~/Scripts/app/antennas-radiation-pattern-problem/antennas-radiation-pattern-problem.service.js",
         "~/Scripts/app/branching-points-problem/branching-points-problem.controller.js",
 
         // praph

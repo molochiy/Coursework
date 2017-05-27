@@ -1,5 +1,6 @@
 ﻿using System.Web.Http;
 using Coursework.Web.Infrastructure;
+using Newtonsoft.Json.Serialization;
 
 namespace Coursework.Web
 {
@@ -9,6 +10,9 @@ namespace Coursework.Web
     {
       // Web API configuration and services
       config.MessageHandlers.Add(new AuthenticationHandler());
+
+      config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+      config.Formatters.JsonFormatter.UseDataContractJsonSerializer = false;
 
       // Web API routes
       config.MapHttpAttributeRoutes();

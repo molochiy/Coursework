@@ -12,9 +12,13 @@ namespace Coursework.Entities.TypeMapping.MappingProfiles
         .ForMember(u => u.Email, lvm => lvm.Ignore());
       CreateMap<User, LoginViewModel>();
 
-
       CreateMap<RegistrationViewModel, User>();
       CreateMap<User, RegistrationViewModel>();
+
+      CreateMap<ProblemViewModel, Problem>()
+        .ForMember(arpp => arpp.CreationDate, arppvm => arppvm.Ignore())
+        .ForMember(arpp => arpp.UserId, arppvm => arppvm.Ignore());
+      CreateMap<Problem, ProblemViewModel>();
     }
   }
 }

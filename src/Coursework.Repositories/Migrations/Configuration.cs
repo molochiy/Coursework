@@ -32,6 +32,16 @@ namespace Coursework.Repositories.Migrations
       };
 
       context.Roles.AddOrUpdate(r => r.Id, roles);
+
+      var problemTypes = new[]
+      {
+        new ProblemType {Id = 1, Description = "Mykola's Antennas Radiation Pattern Problem"},
+        new ProblemType {Id = 2, Description = "Mykhailo's Antennas Radiation Pattern Problem"},
+        new ProblemType {Id = 3, Description = "Mykola's Branching Points Problem"},
+        new ProblemType {Id = 4, Description = "Mykhailo's Branching Points Problem"}
+      };
+
+      context.ProblemTypes.AddOrUpdate(problemTypes);
     }
   }
 }

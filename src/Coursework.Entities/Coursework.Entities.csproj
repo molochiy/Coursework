@@ -56,12 +56,10 @@
   <ItemGroup>
     <Compile Include="AutofacModule.cs" />
     <Compile Include="DatabaseEntities\EntityBase.cs" />
-    <Compile Include="DatabaseEntities\AntennasRadiationPatternProblem.cs" />
-    <Compile Include="DatabaseEntities\ProblemBase.cs" />
+    <Compile Include="DatabaseEntities\Problem.cs" />
     <Compile Include="DatabaseEntities\ProblemResult.cs" />
-    <Compile Include="DatabaseEntities\BranchingPointsProblem.cs" />
-    <Compile Include="ServicesEntities\AntennasRadiationPatternProblem.cs" />
-    <Compile Include="ServicesEntities\BranchingPointsProblem.cs" />
+    <Compile Include="DatabaseEntities\ProblemType.cs" />
+    <Compile Include="ServicesEntities\Problem.cs" />
     <Compile Include="ServicesEntities\ProblemResult.cs" />
     <Compile Include="ServicesEntities\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,6 +74,7 @@
     <Compile Include="TypeMapping\MappingProfiles\ViewModelsServiceEntitiesMappingProfile.cs" />
     <Compile Include="Validators\AccountViewModelValidators\LoginViewModelValidator.cs" />
     <Compile Include="Validators\AccountViewModelValidators\RegistrationViewModelValidator.cs" />
+    <Compile Include="ViewModels\ProblemViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\RegistrationViewModel.cs" />
   </ItemGroup>

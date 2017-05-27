@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System.Collections.Generic;
+using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using Coursework.Entities.ServicesEntities;
@@ -24,46 +25,38 @@ namespace Coursework.Web.ApiControllers
       _mapper = mapper;
     }
 
-    [Route("submit/problem1")]
     [HttpPost]
-    public HttpResponseMessage SubmitAntennasSynthesisProblem(HttpRequestMessage request, AntennasRadiationPatternProblem problem)
+    public HttpResponseMessage AddProblem(HttpRequestMessage request, ProblemViewModel problem)
     {
-      var userID = _membershipService.GetUserIdByLogin(HttpContext.Current.User.Identity.Name);
-
-      bool result = _problemService.SetAntennasSynthesisProblem(new AntennasRadiationPatternProblem
+      return CreateHttpResponse(request, () =>
       {
-        CreationDate = System.DateTime.Now,
-        FModule = problem.FModule,
-        FArgument = problem.FArgument,
-        Eps = problem.Eps,
-        C1 = problem.C1,
-        C2 = problem.C2,
-        M1 = problem.M1,
-        M2 = problem.M2,
-        StateId = 1,
-        UserId = userID
+        var userId = _membershipService.GetUserIdByLogin(HttpContext.Current.User.Identity.Name);
+
+        var problemEntity = _mapper.Map<Problem>(problem);
+        problemEntity.UserId = userId;
+
+        var addedProblemEntity = _problemService.AddProblem(problemEntity);
+
+        var addedProblem = _mapper.Map<ProblemViewModel>(addedProblemEntity);
+
+        return request.CreateResponse(HttpStatusCode.OK, addedProblem);
       });
-      return request.CreateResponse(HttpStatusCode.OK, new { success = result });
     }
 
-    [Route("submit/problem2")]
-    [HttpPost]
-    public HttpResponseMessage SubmitBranchingLinesProblem(HttpRequestMessage request, BranchingPointsProblem problem)
+    [Route("all")]
+    [HttpGet]
+    public HttpResponseMessage GetProblems(HttpRequestMessage request, int problemTypeId)
     {
-      var userID = _membershipService.GetUserIdByLogin(HttpContext.Current.User.Identity.Name);
-
-      bool result = _problemService.SetBranchingLinesProblem(new BranchingPointsProblem
+      return CreateHttpResponse(request, () =>
       {
-        CreationDate = System.DateTime.Now,
-        FModule = problem.FModule,
-        FArgument = problem.FArgument,
-        Eps = problem.Eps,
-        M1 = problem.M1,
-        M2 = problem.M2,
-        StateId = 1,
-        UserId = userID
+        var userId = _membershipService.GetUserIdByLogin(HttpContext.Current.User.Identity.Name);
+
+        var problemEntities = _problemService.GetProblems(userId, problemTypeId);
+
+        var problems = _mapper.Map<List<ProblemViewModel>>(problemEntities);
+
+        return request.CreateResponse(HttpStatusCode.OK, problems);
       });
-      return request.CreateResponse(HttpStatusCode.OK, new { success = result });
     }
   }
 }

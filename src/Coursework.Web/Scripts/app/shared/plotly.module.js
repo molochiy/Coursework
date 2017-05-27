@@ -15,7 +15,6 @@
       }
     }
 
-    var plotlyjs = $window._thirdParty.Plotly;
-    return plotlyjs;
+    return  $window._thirdParty.Plotly;
   };
 })(angular);

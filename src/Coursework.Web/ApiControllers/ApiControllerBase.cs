@@ -17,7 +17,7 @@ namespace Coursework.Web.ApiControllers
       }
       catch (Exception exception)
       {
-        response = request.CreateResponse(HttpStatusCode.InternalServerError, exception.Message);
+        response = request.CreateResponse(HttpStatusCode.InternalServerError, new { message = exception.Message });
       }
 
       return response;

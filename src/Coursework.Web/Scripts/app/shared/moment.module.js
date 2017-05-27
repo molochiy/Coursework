@@ -14,7 +14,7 @@
         $window.moment = undefined;
       }
     }
-    var momentjs = $window._thirdParty.moment;
-    return momentjs;
+
+    return  $window._thirdParty.moment;
   };
 })(angular);

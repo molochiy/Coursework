@@ -17,12 +17,12 @@ namespace Coursework.Repositories.Configuration
       Database.SetInitializer<CourseworkContext>(null);
     }
 
-    public DbSet<AntennasRadiationPatternProblem> AntennasSynthesisProblems { get; set; }
-    public DbSet<BranchingPointsProblem> BranchingLinesProblems { get; set; }
+    public DbSet<Problem> AntennasSynthesisProblems { get; set; }
     public DbSet<ProblemResult> ProblemResults { get; set; }
     public DbSet<Role> Roles { get; set; }
     public DbSet<State> States { get; set; }
     public DbSet<User> Users { get; set; }
+    public DbSet<ProblemType> ProblemTypes { get; set; }
 
     protected override void OnModelCreating(DbModelBuilder modelBuilder)
     {
@@ -30,12 +30,12 @@ namespace Coursework.Repositories.Configuration
 
       modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 
-      modelBuilder.Configurations.Add(new AntennasSynthesisProblemConfiguration());
-      modelBuilder.Configurations.Add(new BranchingLinesProblemConfiguration());
+      modelBuilder.Configurations.Add(new ProblemConfiguration());
       modelBuilder.Configurations.Add(new ProblemResultConfiguration());
       modelBuilder.Configurations.Add(new RoleConfiguration());
       modelBuilder.Configurations.Add(new StateConfiguration());
       modelBuilder.Configurations.Add(new UserConfiguration());
+      modelBuilder.Configurations.Add(new ProblemTypeConfiguration());
     }
   }
 }
