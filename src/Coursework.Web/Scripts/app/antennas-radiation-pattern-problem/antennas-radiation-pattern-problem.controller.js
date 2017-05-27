@@ -13,9 +13,14 @@
 
     vm.solve = solve;
     vm.swapGraph = swapGraph;
+    vm.swapProblem = swapProblem;
 
     function solve() {
       console.log(vm.problemInputData);
+    }
+
+    function swapProblem() {
+      vm.isFirstProblemSelected = !vm.isFirstProblemSelected;
     }
 
     function swapGraph() {
@@ -28,6 +33,7 @@
       }
 
       vm.isFirstGraphShowing = true;
+      vm.isFirstProblemSelected = true;
     }
 
     init();

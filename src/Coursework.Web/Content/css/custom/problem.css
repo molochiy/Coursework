@@ -56,7 +56,7 @@
 
 .problem-description {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 25%;
   width: 100%;
   align-content: center;
@@ -64,6 +64,36 @@
   background: #f2efe8;
   justify-content: start;
   border-bottom: 1px solid #b08a92;
+}
+
+.problem-left-arrow,
+.problem-right-arrow {
+  display: flex;
+  height: 100%;
+  width: 30px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.problem-description-wrapper {
+  display: flex;
+  height: 100%;
+  width: 90%;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.problem-description-content {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .problem-fields {
@@ -153,14 +183,16 @@
 .middle-side .plot-right-arrow {
   display: flex;
   height: 95%;
-  width: 5%;
+  width: 30px;
   justify-content: center;
   align-content: center;
   align-items: center;
 }
 
 .middle-side .plot-left-arrow img,
-.middle-side .plot-right-arrow img {
+.middle-side .plot-right-arrow img,
+.problem-description .problem-left-arrow img,
+.problem-description .problem-right-arrow img {
   height: 24px;
   width: 24px;
 }
