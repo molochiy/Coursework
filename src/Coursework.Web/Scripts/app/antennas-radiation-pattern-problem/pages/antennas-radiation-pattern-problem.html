@@ -11,7 +11,11 @@
           <img src="/Content/images/left-arrow.png" ng-click="aRPPCtrl.swapProblem()" />
         </div>
         <div ng-if="aRPPCtrl.isFirstProblemSelected" class="problem-description-wrapper">
-          <div class="problem-description-content">problem description 1</div>
+          <div class="problem-description-content">
+                <div> $$\sigma(I)=\iint\limits_{\Omega} \left[ P(\xi_1,\xi_2)-|f(\xi_1,\xi_2)|^2 \right] ^2 \mathrm{d}\xi_1 \mathrm{d}\xi_2 $$</div>
+                <div> $$ + \iint\limits_{R \setminus \Omega} \left[ |f(\xi_1,\xi_2)|^2 \right] ^2 \mathrm{d}\xi_1 \mathrm{d}\xi_2 $$ </div >
+                <div> $$\sigma(I)\rightarrow \min_{I\in H_1},\quad I_{nm}\in H_1$$ </div>
+           </div>
         </div>
         <div ng-if="!aRPPCtrl.isFirstProblemSelected" class="problem-description-wrapper">
           <div class="problem-description-content">problem description 2</div>
