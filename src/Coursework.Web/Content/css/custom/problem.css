@@ -57,7 +57,7 @@
 .problem-description {
   display: flex;
   flex-direction: row;
-  height: 25%;
+  height: 30%;
   width: 100%;
   align-content: center;
   align-items: center;
@@ -77,13 +77,12 @@
 }
 
 .problem-description-wrapper {
-  display: flex;
-  height: 100%;
-  width: 90%;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  text-align: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .problem-description-content {
@@ -99,7 +98,7 @@
 .problem-fields {
   display: flex;
   flex-direction: column;
-  height: 60%;
+  height: 55%;
   width: 100%;
   align-content: center;
   align-items: center;

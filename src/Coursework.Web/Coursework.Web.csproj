@@ -204,6 +204,7 @@
     <Content Include="Scripts\app\account\account.service.js" />
     <Content Include="Scripts\app\account\pages\account.html" />
     <Content Include="Scripts\app\shared\services\problem.service.js" />
+    <Content Include="Scripts\app\antennas-radiation-pattern-problem\formulation.directive.js" />
     <Content Include="Scripts\app\antennas-radiation-pattern-problem\plotDraw.directive.js" />
     <Content Include="Scripts\app\antennas-radiation-pattern-problem\arpp-history.directive.js" />
     <Content Include="Scripts\app\antennas-radiation-pattern-problem\pages\arpp.html" />

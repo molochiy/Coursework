@@ -10,15 +10,8 @@
         <div class="problem-left-arrow">
           <img src="/Content/images/left-arrow.png" ng-click="arppCtrl.fucntions.swapProblemType()" />
         </div>
-        <div ng-if="arppCtrl.fucntions.isFirstProblemSelected()" class="problem-description-wrapper">
-          <div class="problem-description-content">
-                <div> $$\sigma(I)=\iint\limits_{\Omega} \left[ P(\xi_1,\xi_2)-|f(\xi_1,\xi_2)|^2 \right] ^2 \mathrm{d}\xi_1 \mathrm{d}\xi_2 $$</div>
-                <div> $$ + \iint\limits_{R \setminus \Omega} \left[ |f(\xi_1,\xi_2)|^2 \right] ^2 \mathrm{d}\xi_1 \mathrm{d}\xi_2 $$ </div >
-                <div> $$\sigma(I)\rightarrow \min_{I\in H_1},\quad I_{nm}\in H_1$$ </div>
-           </div>
-        </div>
-        <div ng-if="!arppCtrl.fucntions.isFirstProblemSelected()" class="problem-description-wrapper">
-          <div class="problem-description-content">problem description 2</div>
+        <div class="problem-description-wrapper">
+            <formulation-problem formulationproblemtype="arppCtrl.variables.formulationProblemType"></formulation-problem>
         </div>
         <div class="problem-right-arrow">
           <img src="/Content/images/right-arrow.png" ng-click="arppCtrl.fucntions.swapProblemType()" />
