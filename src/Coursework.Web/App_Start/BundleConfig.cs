@@ -54,6 +54,7 @@ namespace Coursework.Web
         "~/Scripts/app/account/account.controller.js",
         "~/Scripts/app/antennas-radiation-pattern-problem/arpp.controller.js",
         "~/Scripts/app/antennas-radiation-pattern-problem/arpp-history.directive.js",
+        "~/Scripts/app/antennas-radiation-pattern-problem/plotDraw.directive.js",
         "~/Scripts/app/branching-points-problem/bpp.controller.js",
         "~/Scripts/app/branching-points-problem/bpp-history.directive.js",
 

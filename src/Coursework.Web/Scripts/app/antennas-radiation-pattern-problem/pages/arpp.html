@@ -72,11 +72,8 @@
     <div class="plot-left-arrow">
       <img src="/Content/images/left-arrow.png" ng-click="arppCtrl.fucntions.swapGraph()" />
     </div>
-    <div ng-if="arppCtrl.variables.isFirstGraphShowing" class="plot-wrapper">
-      <div id="plot1" class="plot">plot1</div>
-    </div>
-    <div ng-if="!arppCtrl.variables.isFirstGraphShowing" class="plot-wrapper">
-      <div id="plot2" class="plot">plot2</div>
+    <div class="plot-wrapper">
+      <first-problem-graphic plot-info="arppCtrl.variables.plotInfo"></first-problem-graphic>
     </div>
     <div class="plot-right-arrow">
       <img src="/Content/images/right-arrow.png" ng-click="arppCtrl.fucntions.swapGraph()" />
@@ -99,7 +96,7 @@
       </div>
       <div class="history-footer">
         <div class="problem-button">
-          <a id="ShowButton" class="disabled" ng-click="arppCtrl.fucntions.show()"><span>Show</span></a>
+          <a id="ShowButton" class="disabled" ng-click="arppCtrl.fucntions.showResult()"><span>Show</span></a>
         </div>
       </div>
     </div>
