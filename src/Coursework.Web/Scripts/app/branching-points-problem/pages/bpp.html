@@ -1,0 +1,69 @@
+﻿<div class="problem-page-content">
+  <div class="left-side">
+    <div id="problems" class="input-menu">
+      <div class="problem-header">
+        <span>
+          Formulation of the problem
+        </span>
+      </div>
+      <div class="problem-description"></div>
+      <div class="problem-fields">
+        <div style="padding-left:5%; padding-right:5%;">
+          <div class="form-group" style="text-align:left; align-content:center;">
+            <label for="moduleF">|F|</label>
+            <input type="text" class="form-control" id="moduleF" ng-model="bppCtrl.variables.problemInputData.fModule" placeholder="|F|">
+          </div>
+          <div class="form-group" style="text-align:left;">
+            <label for="argF">arg(F)</label>
+            <input type="text" class="form-control" id="argF" ng-model="bppCtrl.variables.problemInputData.fArgument" placeholder="arg(F)">
+          </div>
+          <div class="form-group row" style="text-align:left;">
+            <div class="col-md-6">
+              <label for="M1">M<sub>1</sub></label>
+              <input type="text" class="form-control" id="M1" ng-model="bppCtrl.variables.problemInputData.m1" placeholder="M1">
+            </div>
+            <div class="col-md-6">
+              <label for="M2">M<sub>2</sub></label>
+              <input type="text" class="form-control" id="M2" ng-model="bppCtrl.variables.problemInputData.m2" placeholder="M2">
+            </div>
+          </div>
+          <div class="form-group" style="text-align:left;">
+            <label for="eps">e</label>
+            <input type="text" class="form-control" id="eps" ng-model="bppCtrl.variables.problemInputData.eps" placeholder="e">
+          </div>
+        </div>
+      </div>
+      <div class="problem-footer">
+        <div class="problem-button">
+          <a ng-click="bppCtrl.fucntions.solve()"><span>Solve</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="middle-side">
+    <div id="plot2" class="plot"></div>
+  </div>
+
+  <div class="right-side">
+    <div id="history" class="input-menu">
+      <div class="history-header">
+        <span>
+          History
+        </span>
+      </div>
+      <div class="history-content">
+        <div class="history-table-content-wrapper">
+          <div id="HistoryTableContent" class="history-table-content">
+            <bpp-history problems="bppCtrl.variables.problemsHistory" selected-problem-id="bppCtrl.variables.selectedProblemId"></bpp-history>
+          </div>
+        </div>
+      </div>
+      <div class="history-footer">
+        <div class="problem-button">
+          <a id="ShowButton" class="disabled" ng-click="bppCtrl.fucntions.show()"><span>Show</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

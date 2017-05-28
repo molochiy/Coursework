@@ -2,9 +2,9 @@
 
   angular
       .module("appModule")
-      .directive("arppHistory", arppHistory);
+      .directive("bppHistory", bppHistory);
 
-  function arppHistory() {
+  function bppHistory() {
     return {
       restrict: 'E',
       terminal: true,
@@ -21,7 +21,7 @@
           dom: "rt",
           autoWidth: false,
           ordering: true,
-          order: [[ 7, "desc" ]],
+          order: [[7, "desc"]],
           paging: false,
           scrollCollapse: true,
           data: problems,
@@ -46,21 +46,13 @@
             "data": "m2",
             "responsivePriority": 4
           }, {
-            "title": "C1",
-            "data": "c1",
-            "responsivePriority": 5
-          }, {
-            "title": "C2",
-            "data": "c2",
-            "responsivePriority": 6
-          }, {
             "title": "e",
             "data": "eps",
-            "responsivePriority": 7
+            "responsivePriority": 5
           }, {
             "title": "Creation date",
             "data": "creationDate",
-            "responsivePriority": 8,
+            "responsivePriority": 6,
             "render": function (data) {
               if (data) {
                 var date = new Date(data);
@@ -72,7 +64,7 @@
           }, {
             "title": "State",
             "data": "stateId",
-            "responsivePriority": 9,
+            "responsivePriority": 7,
             "render": function (data) {
               return getStateById(data);
             }
@@ -124,6 +116,7 @@
             })
             .on('deselect', function (e, dt, type, indexes) {
               if (type === 'row') {
+                $('#ShowButton').addClass('disabled');
                 scope.$apply(() => {
                   disableButton();
                 });

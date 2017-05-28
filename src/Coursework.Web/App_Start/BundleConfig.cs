@@ -41,22 +41,21 @@ namespace Coursework.Web
 
         // angular apps
         "~/Scripts/app/shared/app.module.js",
-        "~/Scripts/app/shared/nicescroll.service.js",
-        "~/Scripts/app/shared/datatables.service.js",
-        "~/Scripts/app/shared/moment.service.js",
-        "~/Scripts/app/shared/plotly.service.js",
+        "~/Scripts/app/shared/services/moment.service.js",
+        "~/Scripts/app/shared/services/plotly.service.js",
         "~/Scripts/app/shared/app.constants.js",
         "~/Scripts/app/shared/top-bar.directive.js",
         "~/Scripts/app/shared/root.controller.js",
-        "~/Scripts/app/shared/notification.service.js",
-        "~/Scripts/app/shared/api.service.js",
+        "~/Scripts/app/shared/services/notification.service.js",
+        "~/Scripts/app/shared/services/api.service.js",
+        "~/Scripts/app/shared/services/problem.service.js",
         "~/Scripts/app/home/index.controller.js",
         "~/Scripts/app/account/account.service.js",
         "~/Scripts/app/account/account.controller.js",
-        "~/Scripts/app/antennas-radiation-pattern-problem/antennas-radiation-pattern-problem.controller.js",
-        "~/Scripts/app/antennas-radiation-pattern-problem/antennas-radiation-pattern-problem.service.js",
+        "~/Scripts/app/antennas-radiation-pattern-problem/arpp.controller.js",
         "~/Scripts/app/antennas-radiation-pattern-problem/arpp-history.directive.js",
-        "~/Scripts/app/branching-points-problem/branching-points-problem.controller.js",
+        "~/Scripts/app/branching-points-problem/bpp.controller.js",
+        "~/Scripts/app/branching-points-problem/bpp-history.directive.js",
 
         // praph
         "~/Scripts/libs/plotly/plotly-latest.min.js"));

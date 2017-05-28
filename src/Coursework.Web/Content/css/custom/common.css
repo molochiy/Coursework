@@ -23,9 +23,7 @@ body,
   height: 90%;
 }
 
-.problem-button a {
-  align-self: center;
-  width: 100%;
+.problem-button span {
   text-align: center;
   font-size: 1.2vw;
   text-decoration: none;

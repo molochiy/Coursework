@@ -2,11 +2,11 @@
 
   angular
     .module("appModule")
-    .factory("antennasRadiationPatternProblemService", antennasRadiationPatternProblemService);
+    .factory("problemService", problemService);
 
-  antennasRadiationPatternProblemService.$inject = ['apiService', 'notificationService'];
+  problemService.$inject = ['apiService', 'notificationService'];
 
-  function antennasRadiationPatternProblemService(apiService) {
+  function problemService(apiService) {
     function addProblem(problemData) {
       return apiService.post('api/problem/', problemData);
     }
