@@ -12,7 +12,8 @@
     vm.variables = {
       problemsHistory: [],
       problemInputData: {},
-      selectedProblemId: -1
+      selectedProblemId: -1,
+      formulationProblemType: 1
     }
 
     vm.fucntions = {
@@ -26,6 +27,8 @@
     function swapProblemType() {
       vm.variables.problemInputData.typeId = vm.fucntions.isFirstProblemSelected() ? PROBLEM_TYPE_IDS.PROBLEM12 : PROBLEM_TYPE_IDS.PROBLEM11;
       getHistory();
+      //MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+      vm.variables.formulationProblemType = vm.variables.formulationProblemType === 1 ? 2 : 1;
     }
 
     function isFirstProblemSelected() {
@@ -105,8 +108,9 @@
       $scope.$applyAsync(() => {
         vm.variables.plotInfo = {
           plotData: null,
-          plotType: null
-        }
+          plotType: null,
+          }
+        vm.variables.formulationProblemType = 1;
       });
     }
 
