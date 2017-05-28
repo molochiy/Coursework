@@ -6,7 +6,19 @@
           Formulation of the problem
         </span>
       </div>
-      <div class="problem-description"></div>
+      <div class="problem-description">
+
+          <div class="problem-left-arrow">
+              <img src="/Content/images/left-arrow.png" ng-click="bppCtrl.fucntions.swapProblemType()"/>
+          </div>
+          <div class="problem-description-wrapper">
+              <formulation-problem formulationproblemtype="bppCtrl.variables.formulationProblemType"></formulation-problem>
+          </div>
+          <div class="problem-right-arrow">
+              <img src="/Content/images/right-arrow.png" ng-click="bppCtrl.fucntions.swapProblemType()"/>
+          </div>
+
+      </div>
       <div class="problem-fields">
         <div style="padding-left:5%; padding-right:5%;">
           <div class="form-group" style="text-align:left; align-content:center;">
@@ -41,9 +53,11 @@
     </div>
   </div>
 
-  <div class="middle-side">
-    <div id="plot2" class="plot"></div>
-  </div>
+    <div class="middle-side">
+        <div class="plot-wrapper">
+            <second-problem-graphic chart-info="bppCtrl.variables.chartInfo"></second-problem-graphic>
+        </div>
+    </div>
 
   <div class="right-side">
     <div id="history" class="input-menu">

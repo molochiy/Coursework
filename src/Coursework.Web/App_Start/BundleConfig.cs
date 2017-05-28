@@ -57,8 +57,10 @@ namespace Coursework.Web
         "~/Scripts/app/antennas-radiation-pattern-problem/plotDraw.directive.js",
         "~/Scripts/app/branching-points-problem/bpp.controller.js",
         "~/Scripts/app/branching-points-problem/bpp-history.directive.js",
+        "~/Scripts/app/branching-points-problem/bpp-chart-draw.directive.js",
         "~/Scripts/app/antennas-radiation-pattern-problem/formulation.directive.js",
         "~/Scripts/app/branching-points-problem/branching-points-problem.controller.js",
+
 
         // praph
         "~/Scripts/libs/plotly/plotly-latest.min.js"));
