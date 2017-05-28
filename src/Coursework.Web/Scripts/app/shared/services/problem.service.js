@@ -1,4 +1,4 @@
-﻿(function(angular) {
+﻿(function (angular) {
 
   angular
     .module("appModule")
@@ -15,10 +15,14 @@
       return apiService.get('api/problem/all?problemTypeId=' + problemTypeId, null);
     }
 
+    function getProblemResult(problemId, problemTypeId) {
+      return apiService.get('api/results?problemId=' + problemId + '&problemTypeId=' + problemTypeId, null);
+    }
+
     var service = {
       addProblem,
-      getProblemHistory/*,
-      getProblemResult*/
+      getProblemHistory,
+      getProblemResult
     }
 
     return service;

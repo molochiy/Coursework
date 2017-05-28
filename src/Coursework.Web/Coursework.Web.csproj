@@ -254,7 +254,6 @@
   <ItemGroup>
     <Compile Include="ApiControllers\AccountController.cs" />
     <Compile Include="ApiControllers\ApiControllerBase.cs" />
-    <Compile Include="ApiControllers\HistoryController.cs" />
     <Compile Include="ApiControllers\ProblemController.cs" />
     <Compile Include="ApiControllers\ResultController.cs" />
     <Compile Include="App_Start\AutofacConfig.cs" />

@@ -35,6 +35,9 @@
       <HintPath>..\..\lib\packages\Autofac.4.6.0\lib\net45\Autofac.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="PoohMathParser">
+      <HintPath>..\..\lib\vendors\PoohMathParser.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,15 +49,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IEncryptionService.cs" />
-    <Compile Include="Abstract\IHistoryService.cs" />
     <Compile Include="Abstract\IMembershipService.cs" />
     <Compile Include="Abstract\IProblemService.cs" />
+    <Compile Include="Abstract\IResultService.cs" />
+    <Compile Include="Abstract\ISolverService.cs" />
     <Compile Include="Abstract\ServiceBase.cs" />
+    <Compile Include="Algorithms\AntennasRadiationPatternProblemAlgorithmType1.cs" />
     <Compile Include="AutofacModule.cs" />
     <Compile Include="Concrete\EncryptionService.cs" />
-    <Compile Include="Concrete\HistoryService.cs" />
     <Compile Include="Concrete\MembershipService.cs" />
     <Compile Include="Concrete\ProblemService.cs" />
+    <Compile Include="Concrete\ResultService.cs" />
+    <Compile Include="Concrete\SerializationService.cs" />
+    <Compile Include="Concrete\SolverService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

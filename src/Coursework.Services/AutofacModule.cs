@@ -13,7 +13,8 @@ namespace Coursework.Services
       builder.RegisterType<EncryptionService>().As<IEncryptionService>();
       builder.RegisterType<MembershipService>().As<IMembershipService>();
       builder.RegisterType<ProblemService>().As<IProblemService>();
-      builder.RegisterType<HistoryService>().As<IHistoryService>();
+      builder.RegisterType<ResultService>().As<IResultService>();
+      builder.RegisterType<SolverService>().As<ISolverService>().SingleInstance();
     }
   }
 }

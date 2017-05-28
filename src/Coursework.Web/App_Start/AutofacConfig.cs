@@ -3,6 +3,7 @@ using System.Web.Mvc;
 using Autofac;
 using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
+using Coursework.Services.Abstract;
 
 namespace Coursework.Web
 {
@@ -17,6 +18,7 @@ namespace Coursework.Web
       builder.RegisterModule<Services.AutofacModule>();
 
       var container = builder.Build();
+      container.Resolve<ISolverService>().StartSolver();
 
       DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
       GlobalConfiguration.Configuration.DependencyResolver = new AutofacWebApiDependencyResolver(container);

@@ -59,6 +59,9 @@
     <Compile Include="DatabaseEntities\Problem.cs" />
     <Compile Include="DatabaseEntities\ProblemResult.cs" />
     <Compile Include="DatabaseEntities\ProblemType.cs" />
+    <Compile Include="ServicesEntities\AntennasRadiationPatternProblemResult.cs" />
+    <Compile Include="ServicesEntities\BranchingPointsProblemResult.cs" />
+    <Compile Include="ServicesEntities\ComplexNumbers.cs" />
     <Compile Include="ServicesEntities\Problem.cs" />
     <Compile Include="ServicesEntities\ProblemResult.cs" />
     <Compile Include="ServicesEntities\User.cs" />
