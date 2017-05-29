@@ -11,7 +11,7 @@
           <img src="/Content/images/left-arrow.png" ng-click="arppCtrl.fucntions.swapProblemType()" />
         </div>
         <div class="problem-description-wrapper">
-            <formulation-problem formulationproblemtype="arppCtrl.variables.formulationProblemType"></formulation-problem>
+          <formulation-problem formulationproblemtype="arppCtrl.variables.formulationProblemType"></formulation-problem>
         </div>
         <div class="problem-right-arrow">
           <img src="/Content/images/right-arrow.png" ng-click="arppCtrl.fucntions.swapProblemType()" />
@@ -62,13 +62,13 @@
   </div>
 
   <div class="middle-side">
-    <div class="plot-left-arrow">
+    <div class="plot-left-arrow visibility-hidden">
       <img src="/Content/images/left-arrow.png" ng-click="arppCtrl.fucntions.swapGraph()" />
     </div>
     <div class="plot-wrapper">
       <first-problem-graphic plot-info="arppCtrl.variables.plotInfo"></first-problem-graphic>
     </div>
-    <div class="plot-right-arrow">
+    <div class="plot-right-arrow visibility-hidden">
       <img src="/Content/images/right-arrow.png" ng-click="arppCtrl.fucntions.swapGraph()" />
     </div>
   </div>
@@ -79,6 +79,7 @@
         <span>
           History
         </span>
+        <img class="refresh-button" src="/Content/images/refresh.png" ng-click="arppCtrl.fucntions.refreshHistory()" />
       </div>
       <div class="history-content">
         <div class="history-table-content-wrapper">

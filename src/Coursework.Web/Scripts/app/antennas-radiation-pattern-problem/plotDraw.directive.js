@@ -17,8 +17,13 @@
         scope.$watch('plotInfo', (newPlotInfo, oldPlotInfo) => {
           if (newPlotInfo && newPlotInfo.plotData) {
             drowPlot(newPlotInfo);
+            changePlotArrowVisibility(true);
+          } else {
+            changePlotArrowVisibility(false);
+            $('#plot1').empty();
           }
         }, true);
+
         function drowPlot(plotInfo) {
           var plotTitle = "Amplitude antennas radiation pattern";
           if (plotInfo.plotType === 2) {
@@ -56,6 +61,16 @@
           };
 
           Plotly.newPlot('plot1', [data], layout);
+        }
+
+        function changePlotArrowVisibility(shouldBeVisible) {
+          if (shouldBeVisible) {
+            $('.plot-left-arrow').removeClass('visibility-hidden');
+            $('.plot-right-arrow').removeClass('visibility-hidden');
+          } else {
+            $('.plot-left-arrow').addClass('visibility-hidden');
+            $('.plot-right-arrow').addClass('visibility-hidden');
+          }
         }
       }
     }

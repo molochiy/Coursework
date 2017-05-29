@@ -21,13 +21,15 @@
       isFirstProblemSelected,
       swapGraph,
       solve,
-      show
+      show,
+      refreshHistory
     }
 
     function swapProblemType() {
       vm.variables.problemInputData.typeId = vm.fucntions.isFirstProblemSelected() ? PROBLEM_TYPE_IDS.PROBLEM22 : PROBLEM_TYPE_IDS.PROBLEM21;
       getHistory();
       vm.variables.formulationProblemType = vm.variables.formulationProblemType === 1 ? 2 : 1;
+      vm.variables.plotInfo = null;
     }
 
     function isFirstProblemSelected() {
@@ -63,7 +65,11 @@
            .catch(response => {
           console.log(response);
         });
-      }
+    }
+
+    function refreshHistory() {
+      getHistory();
+    }
 
     function getHistory() {
       problemService.getProblemHistory(vm.variables.problemInputData.typeId)

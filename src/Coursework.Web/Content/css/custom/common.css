@@ -32,3 +32,7 @@ body,
 a:focus, a:hover {
     cursor: pointer;
 }
+
+.visibility-hidden {
+  visibility: hidden;
+}

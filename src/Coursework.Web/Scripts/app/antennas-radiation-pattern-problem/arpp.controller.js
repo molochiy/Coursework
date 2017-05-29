@@ -21,7 +21,8 @@
       isFirstProblemSelected,
       swapGraph,
       solve,
-      showResult
+      showResult,
+      refreshHistory
     }
 
     function swapProblemType() {
@@ -29,6 +30,7 @@
       getHistory();
       //MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
       vm.variables.formulationProblemType = vm.variables.formulationProblemType === 1 ? 2 : 1;
+      vm.variables.plotInfo = null;
     }
 
     function isFirstProblemSelected() {
@@ -74,6 +76,10 @@
       .catch(response => {
         onError(response);
       });
+    }
+
+    function refreshHistory() {
+      getHistory();
     }
 
     function getHistory() {

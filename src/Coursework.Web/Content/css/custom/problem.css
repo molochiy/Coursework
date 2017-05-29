@@ -85,6 +85,14 @@
     text-align: center;
 }
 
+.refresh-button {
+  height: 2%;
+  position: absolute;
+  top: 12%;
+  right: 2%;
+  cursor: pointer;
+}
+
 .problem-description-content {
   display: inline-block;
   height: 100%;
@@ -196,6 +204,7 @@
   align-items: center;
   align-content: center;
   flex-direction: row;
+  border-radius: 5px;
 }
 
 .middle-side .plot-left-arrow,

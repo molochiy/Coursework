@@ -195,6 +195,7 @@
     <Content Include="Content\images\bg_control_nav.png" />
     <Content Include="Content\images\bg_direction_nav.png" />
     <Content Include="Content\images\left-arrow.png" />
+    <Content Include="Content\images\refresh.png" />
     <Content Include="Content\images\right-arrow.png" />
     <Content Include="Content\svg\expand-arrow-up.svg" />
     <Content Include="Content\svg\expand-arrow-down.svg" />
