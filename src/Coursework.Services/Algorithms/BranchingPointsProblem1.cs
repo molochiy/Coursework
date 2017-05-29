@@ -249,9 +249,11 @@ namespace Coursework.Services.Algorithms
       List<List<KeyValuePair<double, double>>> list = new List<List<KeyValuePair<double, double>>>();
 
       c1 = 1.6;
+      var c1Step = c1 / problem.NumberPartitionsC1;
       while (c1 <= 2.0)
       {
         c2 = 2.0;
+        var c2Step = c2 / problem.NumberPartitionsC2;
         List<KeyValuePair<double, double>> res = new List<KeyValuePair<double, double>>();
         while (c2 <= 2.5)
         {
@@ -277,10 +279,10 @@ namespace Coursework.Services.Algorithms
             prev = next;
           }
 
-          c2 = c2 + 0.1;
+          c2 = c2 + c2Step;
         }
         list.Add(res);
-        c1 = c1 + 0.1;
+        c1 = c1 + c1Step;
       }
 
       BranchingPointsProblemResult result = new BranchingPointsProblemResult();

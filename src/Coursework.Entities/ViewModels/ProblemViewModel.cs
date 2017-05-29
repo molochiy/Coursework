@@ -14,6 +14,8 @@ namespace Coursework.Entities.ViewModels
     public int M2 { get; set; }
     public double C1 { get; set; }
     public double C2 { get; set; }
+    public int NumberPartitionsC1 { get; set; }
+    public int NumberPartitionsC2 { get; set; }
     public int? ResultId { get; set; }
     public int StateId { get; set; }
     public int TypeId { get; set; }

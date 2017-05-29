@@ -4,9 +4,9 @@
       .module("appModule")
       .controller("accountController", accountController);
 
-  accountController.$inject = ['$scope', 'accountService', 'notificationService', '$rootScope', '$location'];
+  accountController.$inject = ['$scope', 'accountService', 'credentialsService', 'notificationService', '$rootScope', '$location'];
 
-  function accountController($scope, accountService, notificationService, $rootScope, $location) {
+  function accountController($scope, accountService, credentialsService, notificationService, $rootScope, $location) {
     var vm = this;
     vm.pageClass = 'page-login';
     vm.login = login;
@@ -24,7 +24,7 @@
 
     function loginCompleted(result) {
       if (result.data.success) {
-        accountService.saveCredentials(vm.loginUser);
+        credentialsService.saveCredentials(vm.loginUser);
         notificationService.displaySuccess('Hello ' + vm.loginUser.username);
         $scope.$parent.rootCtrl.userData.displayUserInfo();
         $location.path('/problem1');
@@ -45,7 +45,7 @@
 
     function registerCompleted(result) {
       if (result.data.success) {
-        accountService.saveCredentials(vm.registerUser);
+        credentialsService.saveCredentials(vm.registerUser);
         notificationService.displaySuccess('Hello ' + vm.registerUser.username);
         $scope.$parent.rootCtrl.userData.displayUserInfo();
         $location.path('/problem1');
@@ -60,7 +60,7 @@
     }
 
     function init() {
-      if ($scope.$parent.rootCtrl.userData.isUserLoggedIn) {
+      if (credentialsService.isUserLoggedIn()) {
         vm.username = $rootScope.repository.loggedUser.username;
         $scope.$parent.rootCtrl.selectFirstProblem();
       }

@@ -44,6 +44,7 @@ namespace Coursework.Web
         "~/Scripts/app/shared/services/moment.service.js",
         "~/Scripts/app/shared/services/plotly.service.js",
         "~/Scripts/app/shared/app.constants.js",
+        "~/Scripts/app/shared/services/сredentials.service.js",
         "~/Scripts/app/shared/top-bar.directive.js",
         "~/Scripts/app/shared/root.controller.js",
         "~/Scripts/app/shared/services/notification.service.js",

@@ -2,9 +2,9 @@
   angular.module("appModule")
     .factory('apiService', apiService);
 
-  apiService.$inject = ['$http', '$q', '$location', 'notificationService', '$rootScope'];
+  apiService.$inject = ['$http', '$q', '$location', 'notificationService', 'credentialsService', '$rootScope'];
 
-  function apiService($http, $q, $location, notificationService, $rootScope) {
+  function apiService($http, $q, $location, notificationService, credentialsService, $rootScope) {
     var service = {
       get: get,
       post: post
@@ -19,6 +19,7 @@
             error => {
               if (error.status == '401') {
                 notificationService.displayError('Authentication required.');
+                credentialsService.removeCredentials();
                 $rootScope.previousState = $location.path();
                 $location.path('/');
               } else {
@@ -26,8 +27,8 @@
               }
             })
         .catch(response => {
-            resolve(response);
-          });
+          resolve(response);
+        });
       });
     }
 
@@ -40,6 +41,7 @@
             error => {
               if (error.status == '401') {
                 notificationService.displayError('Authentication required.');
+                credentialsService.removeCredentials();
                 $rootScope.previousState = $location.path();
                 $location.path('/');
               } else {

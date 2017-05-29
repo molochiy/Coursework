@@ -6,7 +6,6 @@ table.dataTable {
 }
 
   table.dataTable thead {
-    text-transform: uppercase;
     background: #b08a92;
     color: #f2efe8
   }

@@ -8,15 +8,15 @@
       </div>
       <div class="problem-description">
 
-          <div class="problem-left-arrow">
-              <img src="/Content/images/left-arrow.png" ng-click="bppCtrl.fucntions.swapProblemType()"/>
-          </div>
-          <div class="problem-description-wrapper">
-              <formulation-problem formulationproblemtype="bppCtrl.variables.formulationProblemType"></formulation-problem>
-          </div>
-          <div class="problem-right-arrow">
-              <img src="/Content/images/right-arrow.png" ng-click="bppCtrl.fucntions.swapProblemType()"/>
-          </div>
+        <div class="problem-left-arrow">
+          <img src="/Content/images/left-arrow.png" ng-click="bppCtrl.fucntions.swapProblemType()" />
+        </div>
+        <div class="problem-description-wrapper">
+          <formulation-problem formulationproblemtype="bppCtrl.variables.formulationProblemType"></formulation-problem>
+        </div>
+        <div class="problem-right-arrow">
+          <img src="/Content/images/right-arrow.png" ng-click="bppCtrl.fucntions.swapProblemType()" />
+        </div>
 
       </div>
       <div class="problem-fields">
@@ -32,16 +32,24 @@
           <div class="form-group row" style="text-align:left;">
             <div class="col-md-6">
               <label for="M1">M<sub>1</sub></label>
-              <input type="text" class="form-control" id="M1" ng-model="bppCtrl.variables.problemInputData.m1" placeholder="M1">
+              <input type="text" class="form-control" id="M1" ng-model="bppCtrl.variables.problemInputData.m1" placeholder="M&#8321;">
             </div>
             <div class="col-md-6">
               <label for="M2">M<sub>2</sub></label>
-              <input type="text" class="form-control" id="M2" ng-model="bppCtrl.variables.problemInputData.m2" placeholder="M2">
+              <input type="text" class="form-control" id="M2" ng-model="bppCtrl.variables.problemInputData.m2" placeholder="M&#8322;">
             </div>
           </div>
           <div class="form-group" style="text-align:left;">
-            <label for="eps">e</label>
-            <input type="text" class="form-control" id="eps" ng-model="bppCtrl.variables.problemInputData.eps" placeholder="e">
+              <label for="C1">Number of partitions for c<sub>1</sub></label>
+              <input type="text" class="form-control" id="C1" ng-model="arppCtrl.variables.problemInputData.numberPartitionsC1" placeholder="Number of partitions for с&#8321;">
+          </div>
+          <div class="form-group" style="text-align:left;">
+              <label for="C2">Number of partitions for c<sub>2</sub></label>
+              <input type="text" class="form-control" id="C2" ng-model="arppCtrl.variables.problemInputData.numberPartitionsC2" placeholder="Number of partitions for с&#8322;">
+          </div>
+          <div class="form-group" style="text-align:left;">
+            <label for="eps">&epsilon;</label>
+            <input type="text" class="form-control" id="eps" ng-model="bppCtrl.variables.problemInputData.eps" placeholder="&epsilon;">
           </div>
         </div>
       </div>
@@ -53,11 +61,11 @@
     </div>
   </div>
 
-    <div class="middle-side">
-        <div class="plot-wrapper">
-            <second-problem-graphic chart-info="bppCtrl.variables.chartInfo"></second-problem-graphic>
-        </div>
+  <div class="middle-side">
+    <div class="plot-wrapper">
+      <second-problem-graphic chart-info="bppCtrl.variables.chartInfo"></second-problem-graphic>
     </div>
+  </div>
 
   <div class="right-side">
     <div id="history" class="input-menu">

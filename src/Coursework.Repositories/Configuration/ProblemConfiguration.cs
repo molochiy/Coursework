@@ -8,6 +8,8 @@ namespace Coursework.Repositories.Configuration
     {
       Property(p => p.C1).IsRequired();
       Property(p => p.C2).IsRequired();
+      Property(p => p.NumberPartitionsC1).IsRequired();
+      Property(p => p.NumberPartitionsC2).IsRequired();
       Property(p => p.CreationDate).IsRequired();
       Property(p => p.Eps).IsRequired();
       Property(p => p.FArgument).IsRequired();

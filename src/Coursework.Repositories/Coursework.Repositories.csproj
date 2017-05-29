@@ -96,6 +96,10 @@
     <Compile Include="Migrations\201705271528314_Replace brolems to single problem, added problem type.Designer.cs">
       <DependentUpon>201705271528314_Replace brolems to single problem, added problem type.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705292010240_Added number of partition for c1 and c2.cs" />
+    <Compile Include="Migrations\201705292010240_Added number of partition for c1 and c2.Designer.cs">
+      <DependentUpon>201705292010240_Added number of partition for c1 and c2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -125,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705271528314_Replace brolems to single problem, added problem type.resx">
       <DependentUpon>201705271528314_Replace brolems to single problem, added problem type.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705292010240_Added number of partition for c1 and c2.resx">
+      <DependentUpon>201705292010240_Added number of partition for c1 and c2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

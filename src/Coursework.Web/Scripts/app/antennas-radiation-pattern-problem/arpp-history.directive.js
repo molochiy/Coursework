@@ -38,33 +38,29 @@
             "data": "fArgument",
             "responsivePriority": 2
           }, {
-            "title": "M1",
+            "title": "M&#8321;",
             "data": "m1",
             "responsivePriority": 3
           }, {
-            "title": "M2",
+            "title": "M&#8322;",
             "data": "m2",
             "responsivePriority": 4
           }, {
-            "title": "C1",
+            "title": "c&#8321;",
             "data": "c1",
             "responsivePriority": 5
           }, {
-            "title": "C2",
+            "title": "c&#8322;",
             "data": "c2",
             "responsivePriority": 6
           }, {
-            "title": "Step",
-            "data": "step",
-            "responsivePriority": 7
-          }, {
-            "title": "e",
+            "title": "&epsilon;",
             "data": "eps",
-            "responsivePriority": 8
+            "responsivePriority": 7
           }, {
             "title": "Creation date",
             "data": "creationDate",
-            "responsivePriority": 9,
+            "responsivePriority": 8,
             "render": function (data) {
               if (data) {
                 var date = new Date(data);
@@ -76,7 +72,7 @@
           }, {
             "title": "State",
             "data": "stateId",
-            "responsivePriority": 10,
+            "responsivePriority": 9,
             "render": function (data) {
               return getStateById(data);
             }

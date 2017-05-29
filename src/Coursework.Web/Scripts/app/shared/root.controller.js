@@ -2,8 +2,8 @@
   angular.module('appModule')
     .controller('rootController', rootController);
 
-  rootController.$inject = ['$scope', '$location', 'accountService', '$rootScope'];
-  function rootController($scope, $location, accountService, $rootScope) {
+  rootController.$inject = ['$scope', '$location', 'credentialsService', '$rootScope'];
+  function rootController($scope, $location, credentialsService, $rootScope) {
     var vm = this;
 
     vm.userData = {};
@@ -25,7 +25,7 @@
     }
 
     function displayUserInfo() {
-      vm.userData.isUserLoggedIn = accountService.isUserLoggedIn();
+      vm.userData.isUserLoggedIn = credentialsService.isUserLoggedIn();
 
       if (vm.userData.isUserLoggedIn) {
         vm.username = $rootScope.repository.loggedUser.username;
@@ -34,7 +34,7 @@
     }
 
     function logout() {
-      accountService.removeCredentials();
+      credentialsService.removeCredentials();
       $location.path('/');
       vm.userData.displayUserInfo();
     }

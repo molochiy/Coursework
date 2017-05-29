@@ -34,10 +34,10 @@
     }
   }
 
-  isAuthenticated.$inject = ['accountService', '$rootScope', '$location'];
+  isAuthenticated.$inject = ['credentialsService', '$rootScope', '$location'];
 
-  function isAuthenticated(accountService, $rootScope, $location) {
-    if (!accountService.isUserLoggedIn()) {
+  function isAuthenticated(credentialsService, $rootScope, $location) {
+    if (!credentialsService.isUserLoggedIn()) {
       $rootScope.previousState = $location.path();
       $location.path('/login');
     }

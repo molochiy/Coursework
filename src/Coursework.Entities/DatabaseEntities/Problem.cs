@@ -6,6 +6,8 @@ namespace Coursework.Entities.DatabaseEntities
   {
     public double C1 { get; set; }
     public double C2 { get; set; }
+    public int NumberPartitionsC1 { get; set; }
+    public int NumberPartitionsC2 { get; set; }
     public DateTime CreationDate { get; set; }
     public double Eps { get; set; }
     public string FModule { get; set; }

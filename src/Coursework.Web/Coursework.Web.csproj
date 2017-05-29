@@ -221,6 +221,7 @@
     <Content Include="Scripts\app\branching-points-problem\bpp.controller.js" />
     <Content Include="Scripts\app\shared\app.module.js" />
     <Content Include="Scripts\app\shared\pages\topBar.html" />
+    <Content Include="Scripts\app\shared\services\сredentials.service.js" />
     <Content Include="Scripts\app\shared\top-bar.directive.js" />
     <Content Include="Scripts\libs\angularjs\angular-base64.js" />
     <Content Include="Scripts\libs\angularjs\angular-cookies.js" />

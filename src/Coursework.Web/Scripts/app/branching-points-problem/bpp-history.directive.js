@@ -38,21 +38,29 @@
             "data": "fArgument",
             "responsivePriority": 2
           }, {
-            "title": "M1",
+            "title": "M&#8321;",
             "data": "m1",
             "responsivePriority": 3
           }, {
-            "title": "M2",
+            "title": "M&#8322;",
             "data": "m2",
             "responsivePriority": 4
           }, {
-            "title": "e",
-            "data": "eps",
+            "title": "Number of partitions for c&#8321;",
+            "data": "numberPartitionsC1",
             "responsivePriority": 5
+          }, {
+            "title": "Number of partitions for c&#8322;",
+            "data": "numberPartitionsC2",
+            "responsivePriority": 6
+          }, {
+            "title": "&epsilon;",
+            "data": "eps",
+            "responsivePriority": 6
           }, {
             "title": "Creation date",
             "data": "creationDate",
-            "responsivePriority": 6,
+            "responsivePriority": 7,
             "render": function (data) {
               if (data) {
                 var date = new Date(data);
@@ -64,7 +72,7 @@
           }, {
             "title": "State",
             "data": "stateId",
-            "responsivePriority": 7,
+            "responsivePriority": 8,
             "render": function (data) {
               return getStateById(data);
             }
