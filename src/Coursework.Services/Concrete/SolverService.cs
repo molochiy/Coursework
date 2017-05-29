@@ -114,7 +114,16 @@ namespace Coursework.Services.Concrete
         default:
           return new Task(() =>
           {
-            Thread.Sleep(25000);
+            var branchingPointsProblem = BranchingPointsProblem1.Calculate(problem);
+            var resultXml = SerializationService.ToXmlString(branchingPointsProblem);
+            var result = new ProblemResult { Result = resultXml };
+            lock (_lockRero)
+            {
+              var insertedResult = _repository.Insert(result);
+              problem.ResultId = insertedResult.Id;
+              problem.StateId = 3;
+              _repository.Update(problem);
+            }
           });
       }
     }

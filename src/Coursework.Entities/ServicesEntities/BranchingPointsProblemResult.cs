@@ -4,12 +4,12 @@ namespace Coursework.Entities.ServicesEntities
 {
   public class BranchingPointsProblemResult
   {
-    public List<List<Point>> BranchingLines { get; set; }
+    public List<Line> BranchingLines { get; set; }
 
-    public class Point
+    public class Line
     {
-      public double C1 { get; set; }
-      public double C2 { get; set; }
+      public double[] x { get; set; }
+      public double[] y { get; set; }
     }
   }
 }

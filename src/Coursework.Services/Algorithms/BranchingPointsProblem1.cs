@@ -13,7 +13,7 @@ namespace Coursework.Services.Algorithms
     static double[] ksi2;
     static int M = 5;
     static int N = 5;
-    static double eps = 1e-3;
+    static double eps = 1e-6;
     #endregion
 
     public static void Splitting()
@@ -235,7 +235,7 @@ namespace Coursework.Services.Algorithms
       return detB;
     }
 
-    public static BranchingLinesProblrmResult Calculate(Problem problem)
+    public static BranchingPointsProblemResult Calculate(Problem problem)
     {
       M = problem.M1;
       N = problem.M2;
@@ -248,10 +248,10 @@ namespace Coursework.Services.Algorithms
       List<double> C2 = new List<double>();
       List<List<KeyValuePair<double, double>>> list = new List<List<KeyValuePair<double, double>>>();
 
-      c1 = 1.8;
+      c1 = 1.6;
       while (c1 <= 2.0)
       {
-        c2 = 2.2;
+        c2 = 2.0;
         List<KeyValuePair<double, double>> res = new List<KeyValuePair<double, double>>();
         while (c2 <= 2.5)
         {
@@ -267,7 +267,7 @@ namespace Coursework.Services.Algorithms
             next = prev - ((x2 == 0) ? 0 : (x1 / x2));
             count++;
             Console.Write(count + " ");
-            if ((Math.Abs(next - prev) < eps || count == 100))
+            if ((Math.Abs(next - prev) < eps || count == 200))
             {
               res.Add(new KeyValuePair<double, double>(c1, next));
 
@@ -283,17 +283,17 @@ namespace Coursework.Services.Algorithms
         c1 = c1 + 0.1;
       }
 
-      BranchingLinesProblrmResult result = new BranchingLinesProblrmResult();
-      result.BranchingLines = new List<BranchingLinesProblrmResult.Line>();
-      for (int i = 0; i < list.Count; i++)
+      BranchingPointsProblemResult result = new BranchingPointsProblemResult();
+      result.BranchingLines = new List<BranchingPointsProblemResult.Line>();
+      for (int i = 0; i < list[0].Count; i++)
       {
-        BranchingLinesProblrmResult.Line line = new BranchingLinesProblrmResult.Line();
-        line.x = new double[list[i].Count];
-        line.y = new double[list[i].Count];
-        for (int j = 0; j < list[i].Count; j++)
+        BranchingPointsProblemResult.Line line = new BranchingPointsProblemResult.Line();
+        line.x = new double[list.Count];
+        line.y = new double[list.Count];
+        for (int j = 0; j < list.Count; j++)
         {
-          line.x[j] = list[i][j].Key;
-          line.y[j] = list[i][j].Value;
+          line.x[j] = list[j][i].Key;
+          line.y[j] = list[j][i].Value;
         }
         result.BranchingLines.Add(line);
       }
