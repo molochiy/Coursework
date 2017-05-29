@@ -15,7 +15,7 @@
       link: function (scope, element, attrs) {
 
         scope.$watch('plotInfo', (newPlotInfo, oldPlotInfo) => {
-          if (newPlotInfo && newPlotInfo.plotData) {
+          if (newPlotInfo) {
             drowPlot(newPlotInfo);
             changePlotArrowVisibility(true);
           } else {
@@ -30,18 +30,18 @@
             plotTitle = "Power distribution pattern";
           }
 
-          var x = [];
-          var y = [];
-          var step = 2.0 / plotInfo.plotData.length;
-          for (var i = 0; i < plotInfo.plotData.length; i++) {
-            x.push(-1 + i * step);
-            y.push(-1 + i * step);
-          }
+          //var x = [];
+          //var y = [];
+          //var step = 2.0 / plotInfo.plotData.length;
+          //for (var i = 0; i < plotInfo.plotData.length; i++) {
+          //  x.push(-1 + i * step);
+          //  y.push(-1 + i * step);
+          //}
 
-          x.push(1);
-          y.push(1);
+          //x.push(1);
+          //y.push(1);
 
-          var data = { x: x, y: y, z: plotInfo.plotData, type: 'surface' };
+          var data = { x: plotInfo.x, y: plotInfo.y, z: plotInfo.z, type: 'surface' };
 
           var layout = {
             title: plotTitle,

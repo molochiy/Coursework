@@ -32,15 +32,17 @@
                             var trace1 = {
                                 x: chartinfo[i].x,
                                 y: chartinfo[i].y,
-                                type: 'scatter'
+                                type: 'scatter',
+                                name: ''
                             };
                             data.push(trace1);
                         }
                         
 
                         var layout = {
-                            title: 'Double Y Axis Example',
-                            yaxis: { title: 'yaxis title' },
+                          title: 'Branching lines',
+                          yaxis: { title: 'C2' },
+                          xaxis: { title: 'C1' },
                         };
 
                         Plotly.newPlot('plot2', data, layout);
