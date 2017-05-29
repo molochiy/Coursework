@@ -36,10 +36,23 @@
     }
 
     function swapGraph() {
-      vm.variables.plotInfo = {
-        plotData: vm.variables.plotInfo.plotType === 2 ? vm.variables.result.f : vm.variables.result.i,
-        plotType: vm.variables.plotInfo.plotType === 2 ? 1 : 2
+      if (vm.variables.plotInfo.plotType === 2){
+        vm.variables.plotInfo = {
+          z: vm.variables.result.f,
+          x: vm.variables.result.fx,
+          y: vm.variables.result.fy,
+          plotType: 1
+        }
       }
+      else {
+        vm.variables.plotInfo = {
+          z: vm.variables.result.i,
+          x: vm.variables.result.ix,
+          y: vm.variables.result.iy,
+          plotType: 2
+        }
+      }
+
     }
 
     function showResult() {
@@ -51,11 +64,17 @@
           console.log(response);
           vm.variables.result = {
             f: response.data.result.f,
-            i: response.data.result.i
+            fx: response.data.result.fx,
+            fy: response.data.result.fy,
+            i: response.data.result.i,
+            ix: response.data.result.ix,
+            iy: response.data.result.iy
           }
 
           vm.variables.plotInfo = {
-            plotData: vm.variables.result.f,
+            z: vm.variables.result.f,
+            x: vm.variables.result.fx,
+            y: vm.variables.result.fy,
             plotType: 1
           }
         })
@@ -106,10 +125,7 @@
       vm.variables.problemInputData.typeId = PROBLEM_TYPE_IDS.PROBLEM11;
       getHistory();
       $scope.$applyAsync(() => {
-        vm.variables.plotInfo = {
-          plotData: null,
-          plotType: null,
-          }
+        vm.variables.plotInfo = null;
         vm.variables.formulationProblemType = 1;
       });
     }
