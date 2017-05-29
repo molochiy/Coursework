@@ -16,26 +16,46 @@
 
         scope.$watch('plotInfo', (newPlotInfo, oldPlotInfo) => {
           if (newPlotInfo && newPlotInfo.plotData) {
-            drowPlot(newPlotInfo.plotData);
+            drowPlot(newPlotInfo);
           }
         }, true);
-        function drowPlot(PlotData) {
-          if (PlotData) {
-            var data = { z: PlotData, type: 'surface' };
-
-            var layout = {
-              title: 'First Problem',
-              autosize: true,
-              margin: {
-                l: 10,
-                r: 10,
-                b: 50,
-                t: 30
-              }
-            };
-
-            Plotly.newPlot('plot1', [data], layout);
+        function drowPlot(plotInfo) {
+          var plotTitle = "Amplitude antennas radiation pattern";
+          if (plotInfo.plotType === 2) {
+            plotTitle = "Power distribution pattern";
           }
+
+          var x = [];
+          var y = [];
+          var step = 2.0 / plotInfo.plotData.length;
+          for (var i = 0; i < plotInfo.plotData.length; i++) {
+            x.push(-1 + i * step);
+            y.push(-1 + i * step);
+          }
+
+          x.push(1);
+          y.push(1);
+
+          var data = { x: x, y: y, z: plotInfo.plotData, type: 'surface' };
+
+          var layout = {
+            title: plotTitle,
+            autosize: true,
+            margin: {
+              l: 10,
+              r: 10,
+              b: 50,
+              t: 30
+            },
+            xaxis: {
+              title: ""
+            },
+            yaxis: {
+              title: ""
+            }
+          };
+
+          Plotly.newPlot('plot1', [data], layout);
         }
       }
     }

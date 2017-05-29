@@ -54,13 +54,17 @@
             "data": "c2",
             "responsivePriority": 6
           }, {
+            "title": "Step",
+            "data": "step",
+            "responsivePriority": 7
+          }, {
             "title": "e",
             "data": "eps",
-            "responsivePriority": 7
+            "responsivePriority": 8
           }, {
             "title": "Creation date",
             "data": "creationDate",
-            "responsivePriority": 8,
+            "responsivePriority": 9,
             "render": function (data) {
               if (data) {
                 var date = new Date(data);
@@ -72,7 +76,7 @@
           }, {
             "title": "State",
             "data": "stateId",
-            "responsivePriority": 9,
+            "responsivePriority": 10,
             "render": function (data) {
               return getStateById(data);
             }
