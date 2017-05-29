@@ -90,9 +90,24 @@ namespace Coursework.Entities.ServicesEntities
       return !(cn1 > cn2) && cn1 != cn2;
     }
 
+    public static bool operator <=(ComplexNumbers first, ComplexNumbers second)
+    {
+      return (first < second) && (first == second);
+    }
+
+    public static bool operator >=(ComplexNumbers first, ComplexNumbers second)
+    {
+      return (first > second) && (first == second);
+    }
+
     public static ComplexNumbers operator /(ComplexNumbers cn1, ComplexNumbers cn2)
     {
       return new ComplexNumbers((cn1.Re * cn2.Re + cn1.Im * cn2.Im) / (cn2.Re * cn2.Re + cn2.Im * cn2.Im), (cn1.Im * cn2.Re - cn1.Re * cn2.Im) / (cn2.Re * cn2.Re + cn2.Im * cn2.Im));
+    }
+
+    public static ComplexNumbers operator *(int first, ComplexNumbers second)
+    {
+      return new ComplexNumbers(first, 0) * second;
     }
 
     public override string ToString()
@@ -112,6 +127,16 @@ namespace Coursework.Entities.ServicesEntities
           return $"{Re}";
         }
       }
+    }
+
+    public ComplexNumbers Conjugate()
+    {
+      return new ComplexNumbers(Re, -1 * Im);
+    }
+
+    public double Module()
+    {
+      return Math.Sqrt(this.Re * this.Re + this.Im * this.Im);
     }
 
     public ComplexNumbers GetModule()

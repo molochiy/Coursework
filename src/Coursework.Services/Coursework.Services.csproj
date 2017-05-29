@@ -54,6 +54,7 @@
     <Compile Include="Abstract\IResultService.cs" />
     <Compile Include="Abstract\ISolverService.cs" />
     <Compile Include="Abstract\ServiceBase.cs" />
+    <Compile Include="Algorithms\AntennasRadiationPatternProblemAlgorithmType2.cs" />
     <Compile Include="Algorithms\AntennasRadiationPatternProblemAlgorithmType1.cs" />
     <Compile Include="AutofacModule.cs" />
     <Compile Include="Concrete\EncryptionService.cs" />
