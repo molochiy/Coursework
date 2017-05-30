@@ -27,7 +27,7 @@
         function drowPlot(plotInfo) {
           var plotTitle = "Amplitude antennas radiation pattern";
           if (plotInfo.plotType === 2) {
-            plotTitle = "Power distribution pattern";
+            plotTitle = "Current distribution pattern";
           }
 
           //var x = [];
