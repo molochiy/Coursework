@@ -248,14 +248,14 @@ namespace Coursework.Services.Algorithms
       List<double> C2 = new List<double>();
       List<List<KeyValuePair<double, double>>> list = new List<List<KeyValuePair<double, double>>>();
 
-      c1 = 1.6;
+      c1 = 0.1;
       var c1Step = c1 / problem.NumberPartitionsC1;
       while (c1 <= 2.0)
       {
-        c2 = 2.0;
+        c2 = 0.1;
         var c2Step = c2 / problem.NumberPartitionsC2;
         List<KeyValuePair<double, double>> res = new List<KeyValuePair<double, double>>();
-        while (c2 <= 2.5)
+        while (c2 <= 2)
         {
           double prev = c2;
           double next = 10;
