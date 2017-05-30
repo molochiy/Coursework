@@ -97,7 +97,7 @@ namespace Coursework.Services.Algorithms
 
       ComplexNumbers maxF = new ComplexNumbers();
 
-      double step = 0.2;//limitHeight / M;
+      double step = problem.Eps < 0.01 ? problem.Eps : 0.01;//limitHeight / M;
 
       for (double i = -limitWidth; i <= limitWidth; i += step)
       {
