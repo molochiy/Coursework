@@ -28,7 +28,6 @@
     function swapProblemType() {
       vm.variables.problemInputData.typeId = vm.fucntions.isFirstProblemSelected() ? PROBLEM_TYPE_IDS.PROBLEM12 : PROBLEM_TYPE_IDS.PROBLEM11;
       getHistory();
-      //MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
       vm.variables.formulationProblemType = vm.variables.formulationProblemType === 1 ? 2 : 1;
       vm.variables.plotInfo = null;
     }
@@ -104,7 +103,6 @@
     function getHistory() {
       problemService.getProblemHistory(vm.variables.problemInputData.typeId)
       .then(response => {
-        console.log(response);
         $scope.$applyAsync(() => {
           while (vm.variables.problemsHistory.length > 0) {
             vm.variables.problemsHistory.pop();

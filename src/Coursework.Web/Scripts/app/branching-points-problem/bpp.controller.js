@@ -74,7 +74,6 @@
     function getHistory() {
       problemService.getProblemHistory(vm.variables.problemInputData.typeId)
       .then(response => {
-        console.log(response);
         $scope.$applyAsync(() => {
           while (vm.variables.problemsHistory.length > 0) {
             vm.variables.problemsHistory.pop();
