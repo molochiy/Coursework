@@ -29,7 +29,7 @@
       vm.variables.problemInputData.typeId = vm.fucntions.isFirstProblemSelected() ? PROBLEM_TYPE_IDS.PROBLEM22 : PROBLEM_TYPE_IDS.PROBLEM21;
       getHistory();
       vm.variables.formulationProblemType = vm.variables.formulationProblemType === 1 ? 2 : 1;
-      vm.variables.plotInfo = null;
+      vm.variables.chartInfo = null;
     }
 
     function isFirstProblemSelected() {

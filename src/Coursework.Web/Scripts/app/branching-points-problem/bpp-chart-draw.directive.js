@@ -16,7 +16,9 @@
 
                 scope.$watch('chartInfo', (newchartinfo, oldchartinfo) => {
                     if (newchartinfo) {
-                        drowChart(newchartinfo);
+                      drowChart(newchartinfo);
+                    } else {
+                      $('#plot2').empty();
                     }
                 }, true);
                 function drowChart(chartinfo) {
